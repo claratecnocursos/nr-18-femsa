@@ -1,0 +1,9 @@
+# Materiais grandes (manter só localmente)
+*.pptx
+*.pdf
+videos/
+
+# Sistema
+.DS_Store
+Thumbs.db
+.git/index.lock

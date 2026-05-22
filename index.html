@@ -121,16 +121,7 @@
         margin-top: 4px;
       }
 
-      /* Logo */
-      #logo {
-        top: 6px;
-        right: 8px;
-        padding: 3px 6px;
-      }
-
-      #logo img {
-        height: 24px;
-      }
+      /* Logo — mantém tamanho original (estilos base) */
 
       /* Nav */
       #nav {
@@ -518,11 +509,142 @@
         gap: 8px !important;
       }
 
-      #s2b .risk-grid .risk-card:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-        width: calc((100% - 8px) / 2);
-        max-width: calc((100% - 8px) / 2);
+      /* Slide s2b — PEMT (mobile portrait, legível) */
+      #s2b {
+        height: 100%;
+        min-height: 0;
+      }
+
+      #s2b .top-bar {
+        padding: 16px 14px 24px !important;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+      }
+
+      #s2b .section-tag {
+        font-size: 9px !important;
+        padding: 4px 10px !important;
+      }
+
+      #s2b .slide-title {
+        font-size: 17px !important;
+        margin-top: 10px !important;
+        line-height: 1.15 !important;
+        padding-right: 82px !important;
+      }
+
+      #s2b .content-area {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 28px 18px 78px !important;
+      }
+
+      #s2b .wave {
+        display: none;
+      }
+
+      #s2b .pemt-intro-wrap {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        transform: none;
+      }
+
+      #s2b .pemt-intro-card {
+        padding: 14px 14px !important;
+        margin: 0 auto !important;
+        gap: 12px !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        border-radius: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      #s2b .pemt-intro-card .ic-circle {
+        width: 46px !important;
+        height: 46px !important;
+        font-size: 22px !important;
+        flex-shrink: 0;
+      }
+
+      #s2b .pemt-intro-card .ic-text h4 {
+        font-size: 14px !important;
+        margin-bottom: 6px !important;
+        line-height: 1.25 !important;
+        color: var(--gold-lt) !important;
+      }
+
+      #s2b .pemt-intro-card .ic-text p {
+        font-size: 12px !important;
+        line-height: 1.45 !important;
+        color: var(--cream) !important;
+      }
+
+      #s2b .pemt-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        justify-items: stretch !important;
+      }
+
+      #s2b .pemt-cards-grid .pemt-mini-card {
+        padding: 12px 14px !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        min-height: 0;
+        text-align: left !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+      }
+
+      #s2b .pemt-cards-grid .pemt-mini-card:last-child {
+        grid-column: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-self: stretch !important;
+      }
+
+      #s2b .pemt-mini-icon {
+        font-size: 28px !important;
+        margin-bottom: 0 !important;
+        line-height: 1 !important;
+        flex-shrink: 0;
+      }
+
+      #s2b .pemt-mini-card h4 {
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
+        line-height: 1.2 !important;
+        color: var(--white) !important;
+        text-align: left !important;
+      }
+
+      #s2b .pemt-mini-card p {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+        text-align: left !important;
       }
 
       /* Slide 13 */
@@ -1103,6 +1225,71 @@
       gap: 6px !important;
     }
 
+    /* Slide s2b — desktop */
+    .pemt-intro-content {
+      justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .pemt-intro-card {
+      background: rgba(255, 0, 84, 0.05);
+      border-color: rgba(255, 0, 84, 0.2);
+      margin-bottom: 24px;
+      padding: 35px 40px;
+      width: 100%;
+    }
+
+    .pemt-intro-card .ic-circle {
+      font-size: 36px;
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+
+    .pemt-intro-card .ic-text h4 {
+      font-size: 26px;
+      margin-bottom: 14px;
+      color: var(--gold-lt);
+    }
+
+    .pemt-intro-card .ic-text p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--cream);
+    }
+
+    .pemt-cards-grid {
+      width: 100%;
+    }
+
+    .pemt-mini-card {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pemt-mini-icon {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .pemt-mini-card h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .pemt-mini-card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      line-height: 1.5;
+    }
+
     @media (min-width: 768px) {
       .s3-gap-fix {
         gap: 16px;
@@ -1655,6 +1842,32 @@
       font-size: 10px;
       color: rgba(245, 245, 245, 0.6);
       line-height: 1.4;
+    }
+
+    /* Slide s2b — cards inferiores legíveis no desktop */
+    @media (min-width: 769px) {
+      #s2b .pemt-mini-card {
+        padding: 32px 24px;
+      }
+
+      #s2b .pemt-mini-icon {
+        font-size: 48px;
+        margin-bottom: 18px;
+      }
+
+      #s2b .risk-card.pemt-mini-card h4,
+      #s2b .pemt-mini-card h4 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--white);
+      }
+
+      #s2b .risk-card.pemt-mini-card p,
+      #s2b .pemt-mini-card p {
+        font-size: 16px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.78);
+      }
     }
 
     /* tool cards */
@@ -2343,6 +2556,116 @@
 
     .close-modal:hover {
       color: var(--red);
+    }
+
+    /* MODAL — Tutorial (primeira visita) */
+    .tutorial-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100002;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .tutorial-modal-overlay.open {
+      display: flex;
+    }
+
+    .tutorial-modal-box {
+      position: relative;
+      width: 100%;
+      max-width: 920px;
+      background: linear-gradient(180deg, #121212 0%, #080808 100%);
+      border: 1px solid rgba(255, 0, 84, 0.35);
+      border-radius: 18px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.65);
+      animation: zoomIn 0.35s ease;
+    }
+
+    .tutorial-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      z-index: 2;
+    }
+
+    .tutorial-modal-close:hover {
+      background: rgba(255, 0, 84, 0.25);
+      color: var(--red-lt);
+      transform: scale(1.05);
+    }
+
+    .tutorial-modal-title {
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--cream);
+      margin: 0 48px 8px 0;
+      letter-spacing: 0.02em;
+    }
+
+    .tutorial-modal-title span {
+      color: var(--red);
+    }
+
+    .tutorial-modal-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.65);
+      margin: 0 0 18px;
+      line-height: 1.45;
+    }
+
+    .tutorial-modal-box .video-wrap {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .tutorial-modal-overlay {
+        padding: 12px;
+        align-items: center;
+      }
+
+      .tutorial-modal-box {
+        padding: 22px 16px 16px;
+        border-radius: 14px;
+      }
+
+      .tutorial-modal-title {
+        font-size: 16px;
+        margin-right: 40px;
+      }
+
+      .tutorial-modal-desc {
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+
+      .tutorial-modal-close {
+        top: 8px;
+        right: 8px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+      }
     }
 
     .zoom-btn {
@@ -3460,10 +3783,13 @@
 
     @media (max-width: 768px) {
       #top-controls {
-        top: 92px;
-        right: 12px;
+        top: calc(14px + 54px + 16px + 10px);
+        right: 16px;
         left: auto;
         bottom: auto;
+        flex-direction: row;
+        gap: 6px;
+        align-items: center;
       }
 
       .btn-music-toggle,
@@ -3497,8 +3823,12 @@
 
     @media screen and (max-height: 480px) {
       #top-controls {
-        top: 58px;
+        top: calc(5px + 26px + 4px + 8px);
         right: 10px;
+        left: auto;
+        bottom: auto;
+        flex-direction: row;
+        gap: 5px;
       }
 
       .btn-music-toggle,
@@ -3720,34 +4050,34 @@
         <div class="top-bar"><span class="section-tag">📚 Fundamentos</span>
           <div class="slide-title" style="margin-top:6px">O que é <span>PEMT?</span></div>
         </div>
-        <div class="content-area s3-gap-fix" style="justify-content: center; max-width: 1100px; margin: 0 auto; width: 100%;">
-          
-          <div class="icon-card" style="background:rgba(255,0,84,0.05);border-color:rgba(255,0,84,0.2);margin-bottom:24px;padding: 35px 40px; width: 100%;">
-            <div class="ic-circle" style="font-size:36px; width: 72px; height: 72px; flex-shrink: 0;">🏗️</div>
-            <div class="ic-text">
-              <h4 style="font-size: 26px; margin-bottom: 14px; color: var(--gold-lt);">Plataforma Elevatória Móvel de Trabalho</h4>
-              <p style="font-size: 17px; line-height: 1.6; color: var(--cream);">É o equipamento móvel, autopropelido ou não, dotado de uma estação de trabalho (cesto ou plataforma) e sustentado em sua base por haste metálica (lança) ou tesoura, capaz de erguer-se para atingir ponto ou local de trabalho elevado.</p>
+        <div class="content-area s3-gap-fix pemt-intro-content">
+          <div class="pemt-intro-wrap">
+            <div class="icon-card pemt-intro-card">
+              <div class="ic-circle">🏗️</div>
+              <div class="ic-text">
+                <h4>Plataforma Elevatória Móvel de Trabalho</h4>
+                <p>É o equipamento móvel, autopropelido ou não, dotado de uma estação de trabalho (cesto ou plataforma) e sustentado em sua base por haste metálica (lança) ou tesoura, capaz de erguer-se para atingir ponto ou local de trabalho elevado.</p>
+              </div>
+            </div>
+
+            <div class="risk-grid pemt-cards-grid">
+              <div class="risk-card pemt-mini-card">
+                <div class="pemt-mini-icon">🚜</div>
+                <h4>Mobilidade</h4>
+                <p>Pode possuir motor próprio para locomoção (autopropelida) ou não.</p>
+              </div>
+              <div class="risk-card pemt-mini-card">
+                <div class="pemt-mini-icon">🧺</div>
+                <h4>Estação de Trabalho</h4>
+                <p>Possui cesto ou plataforma para acomodar com segurança o trabalhador.</p>
+              </div>
+              <div class="risk-card pemt-mini-card">
+                <div class="pemt-mini-icon">↕️</div>
+                <h4>Elevação</h4>
+                <p>Ergue-se via hastes articuladas, telescópicas ou mecanismo de tesoura.</p>
+              </div>
             </div>
           </div>
-
-          <div class="risk-grid" style="width: 100%;">
-            <div class="risk-card" style="padding: 30px 20px; display: flex; flex-direction: column; align-items: center;">
-              <div style="font-size: 42px; margin-bottom: 16px;">🚜</div>
-              <h4 style="font-size: 18px; margin-bottom: 10px; color: var(--white); text-align: center;">Mobilidade</h4>
-              <p style="font-size: 14px; color: rgba(255,255,255,0.7); text-align: center; line-height: 1.5;">Pode possuir motor próprio para locomoção (autopropelida) ou não.</p>
-            </div>
-            <div class="risk-card" style="padding: 30px 20px; display: flex; flex-direction: column; align-items: center;">
-              <div style="font-size: 42px; margin-bottom: 16px;">🧺</div>
-              <h4 style="font-size: 18px; margin-bottom: 10px; color: var(--white); text-align: center;">Estação de Trabalho</h4>
-              <p style="font-size: 14px; color: rgba(255,255,255,0.7); text-align: center; line-height: 1.5;">Possui cesto ou plataforma para acomodar com segurança o trabalhador.</p>
-            </div>
-            <div class="risk-card" style="padding: 30px 20px; display: flex; flex-direction: column; align-items: center;">
-              <div style="font-size: 42px; margin-bottom: 16px;">↕️</div>
-              <h4 style="font-size: 18px; margin-bottom: 10px; color: var(--white); text-align: center;">Elevação</h4>
-              <p style="font-size: 14px; color: rgba(255,255,255,0.7); text-align: center; line-height: 1.5;">Ergue-se via hastes articuladas, telescópicas ou mecanismo de tesoura.</p>
-            </div>
-          </div>
-
         </div>
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,60 C360,20 720,90 1080,35 C1260,10 1380,70 1440,55 L1440,100 L0,100 Z"
@@ -4956,6 +5286,61 @@
       updateNextButton();
     });
 
+    /* ── TUTORIAL MODAL (recarregar na capa — página 1) ── */
+    const TUTORIAL_VIMEO_ID = '1194825560';
+
+    function openTutorialModal() {
+      const modal = document.getElementById('tutorialModal');
+      const iframe = document.getElementById('tutorialVideoIframe');
+      if (!modal || !iframe || !TUTORIAL_VIMEO_ID) return;
+
+      if (!iframe.getAttribute('src')) {
+        iframe.src = 'https://player.vimeo.com/video/' + TUTORIAL_VIMEO_ID
+          + '?badge=0&autopause=0&title=0&byline=0&portrait=0&dnt=1&app_id=58479';
+      }
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      const bootTutorialPlayer = () => {
+        if (typeof Vimeo === 'undefined') {
+          setTimeout(bootTutorialPlayer, 200);
+          return;
+        }
+        setupVimeoIframe(iframe);
+      };
+      bootTutorialPlayer();
+    }
+
+    function closeTutorialModal() {
+      const modal = document.getElementById('tutorialModal');
+      const iframe = document.getElementById('tutorialVideoIframe');
+      if (!modal) return;
+
+      const player = iframe ? vimeoPlayers.get(iframe) : null;
+      if (player) player.pause().catch(() => {});
+
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function tryShowTutorialModal() {
+      if (currentSlide !== 0) return;
+      if (!TUTORIAL_VIMEO_ID) return;
+      setTimeout(openTutorialModal, 600);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('tutorialModal');
+      if (e.key === 'Escape' && modal?.classList.contains('open')) {
+        closeTutorialModal();
+      }
+    });
+
+    tryShowTutorialModal();
+
     /* ZOOM MODAL FUNCTIONS */
     function openImgModal(src) {
       const modal = document.getElementById('imgModal');
@@ -4967,6 +5352,25 @@
       document.getElementById('imgModal').style.display = "none";
     }
   </script>
+
+  <!-- MODAL — Tutorial (primeira visita) -->
+  <div id="tutorialModal" class="tutorial-modal-overlay" aria-hidden="true" role="dialog"
+    aria-labelledby="tutorialModalTitle" aria-modal="true">
+    <div class="tutorial-modal-box" onclick="event.stopPropagation()">
+      <button type="button" class="tutorial-modal-close" onclick="closeTutorialModal()"
+        aria-label="Fechar tutorial">&times;</button>
+      <h2 class="tutorial-modal-title" id="tutorialModalTitle">Tutorial — <span>Como usar este curso</span></h2>
+      <p class="tutorial-modal-desc">Assista ao vídeo abaixo para conhecer a plataforma. Você pode fechar a qualquer
+        momento clicando no X.</p>
+      <div class="video-wrap">
+        <div class="video-box">
+          <iframe id="tutorialVideoIframe" title="Tutorial do curso" frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- MODAL PARA ZOOM DE IMAGENS -->
   <div id="imgModal" class="modal-overlay" onclick="closeImgModal()">

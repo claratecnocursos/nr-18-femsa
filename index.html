@@ -3639,11 +3639,12 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      align-items: flex-start;
+      align-items: stretch;
     }
 
     .btn-music-toggle,
-    .btn-accessibility-toggle {
+    .btn-accessibility-toggle,
+    .btn-tutorial-toggle {
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -3660,10 +3661,19 @@
       gap: 10px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 100%;
+      min-width: 210px;
+      min-height: 44px;
+      box-sizing: border-box;
+    }
+
+    #btn-tutorial {
+      display: none;
     }
 
     .btn-music-toggle svg,
-    .btn-accessibility-toggle svg {
+    .btn-accessibility-toggle svg,
+    .btn-tutorial-toggle svg {
       width: 20px;
       height: 20px;
       flex-shrink: 0;
@@ -3671,7 +3681,8 @@
     }
 
     .btn-music-toggle:hover,
-    .btn-accessibility-toggle:hover {
+    .btn-accessibility-toggle:hover,
+    .btn-tutorial-toggle:hover {
       background: rgba(0, 0, 0, 0.8);
       transform: scale(1.05);
       border-color: rgba(255, 255, 255, 0.5);
@@ -3790,25 +3801,31 @@
         flex-direction: row;
         gap: 6px;
         align-items: center;
+        min-width: 0;
       }
 
       .btn-music-toggle,
-      .btn-accessibility-toggle {
+      .btn-accessibility-toggle,
+      .btn-tutorial-toggle {
         padding: 10px;
         width: 44px;
         height: 44px;
+        min-width: 44px;
+        min-height: 44px;
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.6);
         border: 1.5px solid rgba(255, 255, 255, 0.4);
       }
 
       .btn-music-toggle .music-text,
-      .btn-accessibility-toggle .a11y-text {
+      .btn-accessibility-toggle .a11y-text,
+      .btn-tutorial-toggle .tutorial-text {
         display: none;
       }
 
       .btn-music-toggle svg,
-      .btn-accessibility-toggle svg {
+      .btn-accessibility-toggle svg,
+      .btn-tutorial-toggle svg {
         width: 22px;
         height: 22px;
       }
@@ -3832,14 +3849,18 @@
       }
 
       .btn-music-toggle,
-      .btn-accessibility-toggle {
+      .btn-accessibility-toggle,
+      .btn-tutorial-toggle {
         width: 32px;
         height: 32px;
+        min-width: 32px;
+        min-height: 32px;
         padding: 6px;
       }
 
       .btn-music-toggle svg,
-      .btn-accessibility-toggle svg {
+      .btn-accessibility-toggle svg,
+      .btn-tutorial-toggle svg {
         width: 18px;
         height: 18px;
       }
@@ -3904,6 +3925,14 @@
           d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm7 9a1 1 0 0 0-2 0 5 5 0 0 1-10 0 1 1 0 0 0-2 0 7 7 0 0 0 6 6.92V21H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-3.08A7 7 0 0 0 19 11z" />
       </svg>
       <span class="a11y-text">Transcrição</span>
+    </button>
+    <button id="btn-tutorial" type="button" onclick="openTutorialModal()" class="btn-tutorial-toggle"
+      title="Abrir tutorial do curso" aria-label="Abrir tutorial do curso">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+      </svg>
+      <span class="tutorial-text">Tutorial</span>
     </button>
   </div>
 
@@ -4874,6 +4903,8 @@
         else nav.classList.remove('nav-hidden');
       }
 
+      updateTutorialButtonVisibility();
+
       updateNextButton();
 
       buildDots();
@@ -5289,6 +5320,12 @@
     /* ── TUTORIAL MODAL (recarregar na capa — página 1) ── */
     const TUTORIAL_VIMEO_ID = '1194825560';
 
+    function updateTutorialButtonVisibility() {
+      const btn = document.getElementById('btn-tutorial');
+      if (!btn) return;
+      btn.style.display = currentSlide === 0 ? 'flex' : 'none';
+    }
+
     function openTutorialModal() {
       const modal = document.getElementById('tutorialModal');
       const iframe = document.getElementById('tutorialVideoIframe');
@@ -5340,6 +5377,7 @@
     });
 
     tryShowTutorialModal();
+    updateTutorialButtonVisibility();
 
     /* ZOOM MODAL FUNCTIONS */
     function openImgModal(src) {

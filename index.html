@@ -3574,13 +3574,20 @@
     </div>
     <p class="accessibility-panel-desc">Ouça o conteúdo do slide atual. Use o player abaixo para iniciar a narração.
     </p>
-    <article id="accessibility-slide-text" aria-live="polite" aria-atomic="true"></article>
-    <div id="elevenlabs-audionative-widget" data-height="90" data-width="100%" data-frameborder="no" data-scrolling="no" data-publicuserid="ef2041af8724e68b7e912193c6692a61c705ef40c0dd7fa5293011bd850fb402" data-playerurl="https://elevenlabs.io/player/index.html" data-public-url="https://claratecnocursos.github.io/nr-18-femsa/index.html">Loading the <a href="https://elevenlabs.io/text-to-speech" target="_blank" rel="noopener">Elevenlabs Text to Speech</a> AudioNative Player...</div>
+    <div id="elevenlabs-audionative-widget"
+      data-height="90"
+      data-width="100%"
+      data-frameborder="no"
+      data-scrolling="no"
+      data-publicuserid="ef2041af8724e68b7e912193c6692a61c705ef40c0dd7fa5293011bd850fb402"
+      data-playerurl="https://elevenlabs.io/player/index.html"
+      data-element-to-read="section.active">
+      Loading the <a href="https://elevenlabs.io/text-to-speech" target="_blank" rel="noopener">Elevenlabs Text to Speech</a> AudioNative Player...
+    </div>
   </div>
   <script src="https://elevenlabs.io/player/audioNativeHelper.js" type="text/javascript"></script>
 
-  <!-- APP -->
-  <div id="app">
+  <main id="app">
 
     <div id="pbar-wrap">
       <div id="pbar" style="width:7.7%"></div>
@@ -3601,7 +3608,7 @@
     <div id="slides">
 
       <!-- ── S1: CAPA ── -->
-      <div class="slide active" id="s1">
+      <section class="slide active" id="s1">
         <div class="s1-inner">
           <div class="s1-text-col">
             <div class="s1-tag">Módulo de Treinamento · Segurança do Trabalho</div>
@@ -3629,10 +3636,10 @@
               fill="rgba(255,255,255,0.05)" />
           </svg>
         </div>
-      </div>
+      </section>
 
       <!-- ── S2: VÍDEO — INTRODUÇÃO ── -->
-      <div class="slide video-slide" id="s2">
+      <section class="slide video-slide" id="s2">
         <div class="top-bar">
           <div><span class="section-tag">📹 Apresentação</span>
             <div class="slide-title">Bem-vindo ao <span>Treinamento</span></div>
@@ -3653,10 +3660,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S6: SUMÁRIO — Conteúdo Programático ── -->
-      <div class="slide" id="s6">
+      <section class="slide" id="s6">
         <div class="top-bar"><span class="section-tag">🗺️ Sumário</span>
           <div class="slide-title" style="margin-top:6px">Conteúdo <span>Programático</span></div>
         </div>
@@ -3680,10 +3687,10 @@
             <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── MÓDULO 1 INTRO ── -->
-      <div class="slide mod-intro-slide" id="s-mod1">
+      <section class="slide mod-intro-slide" id="s-mod1">
         <div class="content-area mod-intro-area">
           <div class="mod-intro-inner">
             <div class="mod-intro-badge">Início do Módulo</div>
@@ -3695,10 +3702,10 @@
             <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S2b: CONTEÚDO — O que é PEMT ── -->
-      <div class="slide" id="s2b">
+      <section class="slide" id="s2b">
         <div class="top-bar"><span class="section-tag">📚 Fundamentos</span>
           <div class="slide-title" style="margin-top:6px">O que é <span>PEMT?</span></div>
         </div>
@@ -3735,10 +3742,10 @@
             <path d="M0,60 C360,20 720,90 1080,35 C1260,10 1380,70 1440,55 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S3: IMAGEM — Modelos de Plataformas ── -->
-      <div class="slide" id="s3">
+      <section class="slide" id="s3">
         <div class="top-bar">
           <div><span class="section-tag">🏗️ Equipamentos</span>
             <div class="slide-title" style="margin-top:6px">Modelos de Plataformas Elevatórias<br><span>Móveis de Trabalho</span></div>
@@ -3759,10 +3766,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S4: VÍDEO — Requisitos de Fornecimento e Manuais ── -->
-      <div class="slide video-slide" id="s4">
+      <section class="slide video-slide" id="s4">
         <div class="top-bar"><span class="section-tag">📋 Requisitos</span>
           <div class="slide-title" style="margin-top:6px">Requisitos de <span>Fornecimento e Manuais</span></div>
         </div>
@@ -3781,11 +3788,11 @@
             <path d="M0,40 C240,90 720,15 1080,65 C1300,90 1400,45 1440,50 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
 
       <!-- ── S7d: QUIZ MÓDULO 1 ── -->
-      <div class="slide" id="s7d">
+      <section class="slide" id="s7d">
         <div class="top-bar"><span class="section-tag">🎯 Fixação</span>
           <div class="slide-title" style="margin-top:6px">Quiz — <span>Módulo 1</span></div>
         </div>
@@ -3820,10 +3827,10 @@
             <path d="M0,50 C360,90 720,10 1080,55 C1280,80 1400,30 1440,45 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── MÓDULO 2 INTRO ── -->
-      <div class="slide mod-intro-slide" id="s-mod2">
+      <section class="slide mod-intro-slide" id="s-mod2">
         <div class="content-area mod-intro-area">
           <div class="mod-intro-inner">
             <div class="mod-intro-badge">Início do Módulo</div>
@@ -3835,10 +3842,10 @@
             <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S14: VÍDEO — Dispositivos de Segurança Obrigatórios ── -->
-      <div class="slide video-slide" id="s14">
+      <section class="slide video-slide" id="s14">
         <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
           <div class="slide-title">Dispositivos de <span>Segurança Obrigatórios</span></div>
         </div>
@@ -3855,10 +3862,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S14b: LISTA — Dispositivos obrigatórios da PEMT ── -->
-      <div class="slide" id="s14b">
+      <section class="slide" id="s14b">
         <div class="top-bar"><span class="section-tag">🛡️ Segurança</span>
           <div class="slide-title" style="margin-top:6px">Dispositivos da <span>PEMT</span></div>
         </div>
@@ -3923,10 +3930,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,50 C480,10 960,85 1440,30 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S16: VÍDEO — A Inspeção Diária ── -->
-      <div class="slide video-slide" id="s16">
+      <section class="slide video-slide" id="s16">
         <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
           <div class="slide-title">A <span>Inspeção Diária</span></div>
         </div>
@@ -3945,10 +3952,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,50 C360,10 720,90 1080,40 L1440,50 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S20b: VÍDEO — Regras Estritas de Manutenção ── -->
-      <div class="slide video-slide" id="s20b">
+      <section class="slide video-slide" id="s20b">
         <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
           <div class="slide-title">Regras Estritas de <span>Manutenção</span></div>
         </div>
@@ -3966,10 +3973,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,30 C360,90 720,10 1440,50 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S21: TRIAGEM PEMT — Módulo 2 ── -->
-      <div class="slide" id="s21">
+      <section class="slide" id="s21">
         <div class="top-bar">
           <span class="section-tag">⚡ DESAFIO</span>
           <div class="slide-title" style="font-size: clamp(22px, 5vw, 40px);">Triagem <span>PEMT</span></div>
@@ -4040,10 +4047,10 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,50 C480,10 960,85 1440,30 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── MÓDULO 3 INTRO ── -->
-      <div class="slide mod-intro-slide" id="s-mod3">
+      <section class="slide mod-intro-slide" id="s-mod3">
         <div class="content-area mod-intro-area">
           <div class="mod-intro-inner">
             <div class="mod-intro-badge">Início do Módulo</div>
@@ -4055,10 +4062,10 @@
             <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
               fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
       <!-- ── S22: VÍDEO — VILÕES ERGONÔMICOS ── -->
-      <div class="slide video-slide" id="s22">
+      <section class="slide video-slide" id="s22">
         <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
           <div class="slide-title">Bem-vindos ao <span>Módulo 3</span></div>
         </div>
@@ -4076,7 +4083,7 @@
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
-      </div>
+      </section>
 
     </div><!-- /slides -->
 
@@ -4097,7 +4104,7 @@
       </button>
     </div>
 
-  </div><!-- /app -->
+  </main><!-- /app -->
 
   <audio id="click-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"
     preload="auto"></audio>

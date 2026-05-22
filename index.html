@@ -3296,10 +3296,20 @@
       }
     }
 
-    /* MUSIC BUTTON */
-    .btn-music-toggle {
+    /* TOP CONTROLS — Música + Acessibilidade */
+    #top-controls {
       position: fixed;
+      top: 20px;
+      left: 20px;
       z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .btn-music-toggle,
+    .btn-accessibility-toggle {
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -3316,28 +3326,137 @@
       gap: 10px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      top: 20px;
-      left: 20px;
     }
 
-    .btn-music-toggle svg {
+    .btn-music-toggle svg,
+    .btn-accessibility-toggle svg {
       width: 20px;
       height: 20px;
+      flex-shrink: 0;
       transition: transform 0.3s ease;
     }
 
-    .btn-music-toggle:hover {
+    .btn-music-toggle:hover,
+    .btn-accessibility-toggle:hover {
       background: rgba(0, 0, 0, 0.8);
       transform: scale(1.05);
       border-color: rgba(255, 255, 255, 0.5);
     }
 
+    .btn-accessibility-toggle.active {
+      background: rgba(255, 0, 84, 0.25);
+      border-color: rgba(255, 0, 84, 0.6);
+      color: #fff;
+    }
+
+    /* Painel de acessibilidade / narração ElevenLabs */
+    #accessibility-panel {
+      position: fixed;
+      bottom: 96px;
+      left: 20px;
+      right: 20px;
+      max-width: 420px;
+      z-index: 10001;
+      background: rgba(8, 8, 8, 0.96);
+      border: 1px solid rgba(255, 0, 84, 0.35);
+      border-radius: 20px;
+      padding: 18px 18px 14px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(16px);
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    #accessibility-panel.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .accessibility-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .accessibility-panel-head h2 {
+      font-family: var(--font-h);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--cream);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .accessibility-panel-close {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+    }
+
+    .accessibility-panel-close:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .accessibility-panel-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 12px;
+    }
+
+    #accessibility-slide-text {
+      max-height: 72px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      scrollbar-width: thin;
+    }
+
+    #accessibility-slide-text:empty::before {
+      content: 'Carregando texto do slide…';
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    #elevenlabs-audionative-widget {
+      width: 100% !important;
+      min-height: 90px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    #elevenlabs-audionative-widget iframe {
+      border-radius: 12px;
+    }
+
     @media (max-width: 768px) {
-      .btn-music-toggle {
+      #top-controls {
         top: 92px;
         right: 12px;
         left: auto;
         bottom: auto;
+      }
+
+      .btn-music-toggle,
+      .btn-accessibility-toggle {
         padding: 10px;
         width: 44px;
         height: 44px;
@@ -3346,28 +3465,51 @@
         border: 1.5px solid rgba(255, 255, 255, 0.4);
       }
 
-      .btn-music-toggle .music-text {
+      .btn-music-toggle .music-text,
+      .btn-accessibility-toggle .a11y-text {
         display: none;
       }
 
-      .btn-music-toggle svg {
+      .btn-music-toggle svg,
+      .btn-accessibility-toggle svg {
         width: 22px;
         height: 22px;
+      }
+
+      #accessibility-panel {
+        left: 12px;
+        right: 12px;
+        bottom: 88px;
+        max-width: none;
       }
     }
 
     @media screen and (max-height: 480px) {
-      .btn-music-toggle {
+      #top-controls {
         top: 58px;
         right: 10px;
+      }
+
+      .btn-music-toggle,
+      .btn-accessibility-toggle {
         width: 32px;
         height: 32px;
         padding: 6px;
       }
 
-      .btn-music-toggle svg {
+      .btn-music-toggle svg,
+      .btn-accessibility-toggle svg {
         width: 18px;
         height: 18px;
+      }
+
+      #accessibility-panel {
+        bottom: 72px;
+        padding: 12px;
+      }
+
+      #accessibility-slide-text {
+        max-height: 48px;
       }
 
       #notification {
@@ -3401,15 +3543,41 @@
 <body>
   <!-- BACKGROUND MUSIC -->
   <audio id="bg-music" src="musica/musica_foco.mp3" loop></audio>
-  <button id="btn-music" onclick="toggleMusic()" class="btn-music-toggle" title="Alternar Música">
-    <span id="music-icon-container">
-      <svg viewBox="0 0 24 24" fill="currentColor">
+
+  <div id="top-controls">
+    <button id="btn-music" onclick="toggleMusic()" class="btn-music-toggle" title="Alternar Música"
+      aria-label="Alternar música de fundo">
+      <span id="music-icon-container">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 5L9.91 7.09 12 9.18V5z" />
+        </svg>
+      </span>
+      <span class="music-text">Música: OFF</span>
+    </button>
+    <button id="btn-accessibility" onclick="toggleAccessibilityPanel()" class="btn-accessibility-toggle"
+      title="Acessibilidade — Transcrição em áudio" aria-expanded="false" aria-controls="accessibility-panel"
+      aria-label="Abrir transcrição em áudio">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path
-          d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 5L9.91 7.09 12 9.18V5z" />
+          d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm7 9a1 1 0 0 0-2 0 5 5 0 0 1-10 0 1 1 0 0 0-2 0 7 7 0 0 0 6 6.92V21H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-3.08A7 7 0 0 0 19 11z" />
       </svg>
-    </span>
-    <span class="music-text">Música: OFF</span>
-  </button>
+      <span class="a11y-text">Transcrição</span>
+    </button>
+  </div>
+
+  <div id="accessibility-panel" role="dialog" aria-labelledby="accessibility-panel-title" aria-hidden="true">
+    <div class="accessibility-panel-head">
+      <h2 id="accessibility-panel-title">Transcrição em áudio</h2>
+      <button type="button" class="accessibility-panel-close" onclick="toggleAccessibilityPanel(false)"
+        aria-label="Fechar painel de acessibilidade">&times;</button>
+    </div>
+    <p class="accessibility-panel-desc">Ouça o conteúdo do slide atual. Use o player abaixo para iniciar a narração.
+    </p>
+    <article id="accessibility-slide-text" aria-live="polite" aria-atomic="true"></article>
+    <div id="elevenlabs-audionative-widget" data-height="90" data-width="100%" data-frameborder="no" data-scrolling="no" data-publicuserid="ef2041af8724e68b7e912193c6692a61c705ef40c0dd7fa5293011bd850fb402" data-playerurl="https://elevenlabs.io/player/index.html" data-public-url="https://claratecnocursos.github.io/nr-18-femsa/index.html">Loading the <a href="https://elevenlabs.io/text-to-speech" target="_blank" rel="noopener">Elevenlabs Text to Speech</a> AudioNative Player...</div>
+  </div>
+  <script src="https://elevenlabs.io/player/audioNativeHelper.js" type="text/javascript"></script>
 
   <!-- APP -->
   <div id="app">
@@ -3964,6 +4132,57 @@
     }
 
     /* ══════════════════════════════════════════
+       ACESSIBILIDADE — Transcrição ElevenLabs
+       ══════════════════════════════════════════ */
+    let accessibilityOpen = false;
+
+    function extractSlideText(slide) {
+      if (!slide) return '';
+      const clone = slide.cloneNode(true);
+      clone.querySelectorAll('script, iframe, svg, .wave, button, style, .nav-btn').forEach(el => el.remove());
+      return (clone.innerText || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function syncSlidesAriaHidden() {
+      document.querySelectorAll('.slide').forEach(slide => {
+        if (accessibilityOpen) {
+          slide.setAttribute('aria-hidden', slide.classList.contains('active') ? 'false' : 'true');
+        } else {
+          slide.removeAttribute('aria-hidden');
+        }
+      });
+    }
+
+    function updateAccessibilitySlideText() {
+      const panel = document.getElementById('accessibility-panel');
+      if (!panel || !panel.classList.contains('open')) return;
+      const slide = document.querySelector('.slide.active');
+      const target = document.getElementById('accessibility-slide-text');
+      if (!target) return;
+      target.textContent = extractSlideText(slide) || 'Nenhum conteúdo de texto neste slide.';
+    }
+
+    function toggleAccessibilityPanel(forceState) {
+      const panel = document.getElementById('accessibility-panel');
+      const btn = document.getElementById('btn-accessibility');
+      if (!panel || !btn) return;
+
+      const open = typeof forceState === 'boolean' ? forceState : !panel.classList.contains('open');
+      accessibilityOpen = open;
+
+      panel.classList.toggle('open', open);
+      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      btn.classList.toggle('active', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+      syncSlidesAriaHidden();
+
+      if (open) {
+        updateAccessibilitySlideText();
+      }
+    }
+
+    /* ══════════════════════════════════════════
        NAVIGATION
        ══════════════════════════════════════════ */
     const TOTAL = document.querySelectorAll('.slide').length;
@@ -4298,10 +4517,18 @@
 
       if (newSlide.id === 's14b') resetPemtFCards();
       initVimeoOnActiveSlide(newSlide);
+      if (accessibilityOpen) {
+        syncSlidesAriaHidden();
+        updateAccessibilitySlideText();
+      }
     }
 
     // Keyboard nav
     document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && accessibilityOpen) {
+        toggleAccessibilityPanel(false);
+        return;
+      }
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(currentSlide + 1, true);
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goTo(currentSlide - 1, true);
     });

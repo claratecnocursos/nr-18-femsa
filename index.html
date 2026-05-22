@@ -1875,6 +1875,17 @@
       display: none !important;
     }
 
+    .video-box.req-item.req-done::after {
+      display: block !important;
+      content: '✅ Concluído';
+      background: #27ae60;
+      color: #fff;
+      opacity: 1;
+      right: 12px !important;
+      top: 12px !important;
+      z-index: 20;
+    }
+
     .scanlines {
       position: absolute;
       inset: 0;
@@ -3650,7 +3661,7 @@
           <div class="video-wrap">
             <div class="video-box">
               <iframe
-                src="https://player.vimeo.com/video/1193369492?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+                src="https://player.vimeo.com/video/1194794665?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NR-18 Plataforma de Trabalho Aéreo">
               </iframe>
@@ -3852,7 +3863,8 @@
         <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
           <div class="video-wrap">
             <div class="video-box">
-              <iframe src="https://player.vimeo.com/video/1194042419?badge=0&autopause=0&player_id=0&app_id=58479"
+              <iframe
+                src="https://player.vimeo.com/video/1194715503?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Dispositivos de Segurança Obrigatórios">
               </iframe>
@@ -3942,7 +3954,8 @@
 
           <div class="video-wrap">
             <div class="video-box">
-              <iframe src="https://player.vimeo.com/video/1194042418?badge=0&autopause=0&player_id=0&app_id=58479"
+              <iframe
+                src="https://player.vimeo.com/video/1194715501?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Inspeção Diária">
               </iframe>
@@ -3963,7 +3976,7 @@
           <div class="video-wrap">
             <div class="video-box">
               <iframe
-                src="https://player.vimeo.com/video/1194042420?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+                src="https://player.vimeo.com/video/1194715500?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Regras Estritas de Manutenção">
               </iframe>
@@ -4209,12 +4222,17 @@
         + '?badge=0&autopause=0&title=0&byline=0&portrait=0&dnt=1&app_id=58479';
     }
 
+    function markVideoComplete(box) {
+      if (!box || box.classList.contains('req-done')) return;
+      box.classList.add('req-done');
+      updateNextButton();
+    }
+
     function resetVimeoAfterEnd(player, box) {
+      markVideoComplete(box);
       player.setCurrentTime(0).then(() => player.pause()).catch(() => {
         player.unload().catch(() => {});
       });
-      box.classList.add('req-done');
-      updateNextButton();
       const bgMusic = document.getElementById('bg-music');
       if (bgMusic && typeof musicEnabled !== 'undefined' && musicEnabled) {
         bgMusic.play().catch(e => console.log('Music play error:', e));
@@ -4253,6 +4271,15 @@
       });
 
       player.on('ended', () => resetVimeoAfterEnd(player, box));
+
+      player.on('timeupdate', (data) => {
+        if (box.classList.contains('req-done')) return;
+        player.getDuration().then((duration) => {
+          if (duration > 0 && data.seconds >= duration - 0.5) {
+            resetVimeoAfterEnd(player, box);
+          }
+        }).catch(() => {});
+      });
 
       return player;
     }

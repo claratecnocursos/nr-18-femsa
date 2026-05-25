@@ -1,0 +1,27 @@
+{
+  "name": "nr-18-femsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "audio-data.js",
+  "scripts": {
+    "manifest": "node audio-data.js",
+    "audios": "node generate-audios.js",
+    "audios:resume": "node generate-audios.js --resume",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claratecnocursos/nr-18-femsa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/claratecnocursos/nr-18-femsa/issues"
+  },
+  "homepage": "https://github.com/claratecnocursos/nr-18-femsa#readme",
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-25T19:06:38.703Z",
+  "source": "index.html",
+  "audioDir": "audios",
+  "slides": [
+    {
+      "index": 0,
+      "id": "s1",
+      "title": "NR-18 —Treinamento dePlataforma de Trabalho Aéreo",
+      "file": "audios/s1.mp3",
+      "text": "Módulo de Treinamento. Segurança do Trabalho. NR-18 — Treinamento de Plataforma de Trabalho Aéreo. Capacitação e segurança na operação de Plataformas de Trabalho Aéreo, PTA."
+    },
+    {
+      "index": 1,
+      "id": "s2",
+      "title": "Bem-vindo ao Treinamento",
+      "file": "audios/s2.mp3",
+      "text": "Apresentação. Bem-vindo ao Treinamento de Plataforma de Trabalho Aéreo, NR-18. Assista ao vídeo de introdução e avance quando concluir."
+    },
+    {
+      "index": 2,
+      "id": "s6",
+      "title": "Conteúdo Programático",
+      "file": "audios/s6.mp3",
+      "text": "Sumário. Conteúdo Programático. Módulo 1: Introdução e Conceitos Básicos. Módulo 2: Requisitos de Segurança, Inspeção e Manutenção. Módulo 3: Regras de Operação Segura e Riscos do Ambiente."
+    },
+    {
+      "index": 3,
+      "id": "s-mod1",
+      "title": "MÓDULO 1",
+      "file": "audios/s-mod1.mp3",
+      "text": "Início do Módulo MÓDULO 1 Introdução e Conceitos Básicos"
+    },
+    {
+      "index": 4,
+      "id": "s2b",
+      "title": "O que é PEMT?",
+      "file": "audios/s2b.mp3",
+      "text": "Fundamentos O que é PEMT? Plataforma Elevatória Móvel de Trabalho É o equipamento móvel, autopropelido ou não, dotado de uma estação de trabalho (cesto ou plataforma) e sustentado em sua base por haste metálica (lança) ou tesoura, capaz de erguer-se para atingir ponto ou local de trabalho elevado. Mobilidade Pode possuir motor próprio para locomoção (autopropelida) ou não. Estação de Trabalho Possui cesto ou plataforma para acomodar com segurança o trabalhador. ↕ Elevação Ergue-se via hastes articuladas, telescópicas ou mecanismo de tesoura."
+    },
+    {
+      "index": 5,
+      "id": "s3",
+      "title": "Modelos de PlataformasElevatóriasMóveis de Trabalho",
+      "file": "audios/s3.mp3",
+      "text": "Equipamentos. Modelos de Plataformas Elevatórias Móveis de Trabalho. Visualize a imagem com os principais tipos: mastro, telescópica, tesoura e articulada."
+    },
+    {
+      "index": 6,
+      "id": "s4",
+      "title": "Requisitos de Fornecimento e Manuais",
+      "file": "audios/s4.mp3",
+      "text": "Requisitos de Fornecimento e Manuais. Assista ao vídeo sobre inspeção antes da entrega, manuais no local de uso e avisos de segurança em português."
+    },
+    {
+      "index": 7,
+      "id": "s7d",
+      "title": "Quiz — Módulo 1",
+      "file": "audios/s7d.mp3",
+      "text": "Quiz do Módulo 1. Responda às três perguntas sobre os conceitos do módulo. Pergunta 1: O que é a PEMT (Plataforma Elevatória Móvel de Trabalho)? Alternativa 1: Equipamento móvel com cesto de trabalho, sustentado por haste ou tesoura, para erguer o trabalhador com segurança Alternativa 2: Veículo autopropelido usado apenas para transporte horizontal de materiais Alternativa 3: Equipamento fixo instalado permanentemente em edifícios Alternativa 4: Ferramenta manual para içamento de cargas no solo Pergunta 2: Quais modelos de plataformas elevatórias você pode encontrar no dia a dia da obra? Alternativa 1: Mastro, Telescópica, Tesoura e Articulada Alternativa 2: Guindaste, Empilhadeira, Betoneira e Grua Alternativa 3: Fixa, Suspensa, Flutuante e Industrial Alternativa 4: Vertical, Horizontal, Inclinada e Circular Pergunta 3: Sobre os requisitos de fornecimento e manuais da PEMT, qual afirmativa está correta? Alternativa 1: A máquina deve ser inspecionada antes da entrega; manuais disponíveis no local e avisos em português Alternativa 2: A inspeção só é necessária após o primeiro uso na obra Alternativa 3: Os manuais podem ficar arquivados na sede da locadora Alternativa 4: Os avisos de segurança podem estar em qualquer idioma"
+    },
+    {
+      "index": 8,
+      "id": "s-mod2",
+      "title": "MÓDULO 2",
+      "file": "audios/s-mod2.mp3",
+      "text": "Início do Módulo MÓDULO 2 Requisitos de Segurança, Inspeção e Manutenção"
+    },
+    {
+      "index": 9,
+      "id": "s14",
+      "title": "Dispositivos de Segurança Obrigatórios",
+      "file": "audios/s14.mp3",
+      "text": "Vídeo aula. Dispositivos de Segurança Obrigatórios. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 10,
+      "id": "s14b",
+      "title": "Dispositivos da PEMT",
+      "file": "audios/s14b.mp3",
+      "text": "Segurança Dispositivos da PEMT A PEMT deve ser dotada de: Nivelamento Dispositivos de segurança que garantam seu perfeito nivelamento no ponto de trabalho, conforme especificação do fabricante. Alça de apoio interno Ponto de apoio fixado no interior do cesto ou plataforma para o operador manter equilíbrio, estabilidade e postura segura durante o trabalho em altura. Proteção contra quedas Sistema de proteção contra quedas que atenda às especificações do fabricante ou, na falta destas, ao disposto na NR-12. Parada de emergência Botão de parada de emergência. ⬇ Descida de emergência Dispositivo de emergência que possibilite baixar o trabalhador e a plataforma até o solo em caso de pane elétrica, hidráulica ou mecânica. Sinalização sonora Sistema sonoro automático de sinalização acionado durante a subida e a descida. Proteção elétrica Proteção contra choque elétrico. ⏱ Horímetro Instrumento que mede o tempo de funcionamento de um motor ou equipamento. 1 / 8"
+    },
+    {
+      "index": 11,
+      "id": "s16",
+      "title": "A Inspeção Diária",
+      "file": "audios/s16.mp3",
+      "text": "Vídeo aula. A Inspeção Diária. Assista ao vídeo sobre os procedimentos de inspeção pré-uso da PEMT."
+    },
+    {
+      "index": 12,
+      "id": "s20b",
+      "title": "Regras Estritas de Manutenção",
+      "file": "audios/s20b.mp3",
+      "text": "Vídeo aula. Regras Estritas de Manutenção. Assista ao vídeo sobre manutenção preventiva e corretiva."
+    },
+    {
+      "index": 13,
+      "id": "s21",
+      "title": "Triagem PEMT",
+      "file": "audios/s21.mp3",
+      "text": "DESAFIO Triagem PEMT Classifique a Segurança Você receberá 5 cartões sobre a PEMT/PTA — um de cada tema, em ordem variada. Classifique cada um como equipamento, inspeção pré-uso ou manutenção. Triagem em andamento 1 / 5 ... Toque na categoria correta para liberar o próximo cartão Triagem Concluída! Módulo 2 Validado"
+    },
+    {
+      "index": 14,
+      "id": "s-mod3",
+      "title": "MÓDULO 3",
+      "file": "audios/s-mod3.mp3",
+      "text": "Início do Módulo MÓDULO 3 Regras de Operação Segura e Riscos do Ambiente"
+    },
+    {
+      "index": 15,
+      "id": "s22",
+      "title": "Regras de Movimentação Segura",
+      "file": "audios/s22.mp3",
+      "text": "Vídeo aula. Regras de Movimentação Segura. Assista ao vídeo sobre as regras de movimentação segura da PEMT e avance quando concluir."
+    }
+  ]
+}

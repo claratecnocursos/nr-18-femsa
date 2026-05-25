@@ -3,6 +3,12 @@
 *.pdf
 videos/
 
+# Áudios gerados localmente (manifest.json fica versionado)
+audios/*.mp3
+audios/.text-hashes.json
+.env
+.env.local
+
 # Sistema
 .DS_Store
 Thumbs.db

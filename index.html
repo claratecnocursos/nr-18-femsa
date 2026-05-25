@@ -1955,14 +1955,19 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
-      padding: 30px 50px 60px 80px;
-      gap: 40px;
+      justify-content: center;
+      padding: 30px clamp(24px, 4vw, 48px) 60px;
+      gap: clamp(24px, 4vw, 48px);
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
 
     .s1-text-col {
-      flex: 1;
-      max-width: 600px;
+      flex: 1 1 380px;
+      max-width: 580px;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -1970,9 +1975,11 @@
     }
 
     .s1-img-col {
-      flex: 1;
+      flex: 1 1 340px;
+      max-width: 540px;
+      min-width: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
     }
 
@@ -3010,11 +3017,19 @@
     /* ── DESKTOP OPTIMIZATION ── */
     @media screen and (min-width: 769px) {
       .top-bar {
-        padding-left: 200px;
+        padding-left: max(28px, calc(168px + 28px));
       }
 
+      /* Capa: só desvia do centro quando a tela é estreita o suficiente para encostar nos botões */
       #s1 .s1-inner {
-        padding-left: 200px;
+        padding-left: max(clamp(32px, 4vw, 56px), calc(168px + 24px));
+      }
+    }
+
+    @media screen and (min-width: 1100px) {
+      #s1 .s1-inner {
+        padding-left: clamp(40px, 5vw, 72px);
+        padding-right: clamp(40px, 5vw, 72px);
       }
     }
 
@@ -3039,11 +3054,19 @@
         margin: 0 auto;
       }
 
-      .s1-inner {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 60px;
+      #s1 .s1-inner {
+        max-width: min(1280px, calc(100% - 80px));
+        padding-top: clamp(36px, 5vh, 56px);
+        padding-bottom: clamp(64px, 9vh, 88px);
+        gap: clamp(40px, 5vw, 80px);
+      }
+
+      #s1 .s1-text-col {
+        flex: 1 1 46%;
+      }
+
+      #s1 .s1-img-col {
+        flex: 1 1 42%;
       }
 
       .video-slide .content-area {

@@ -3,8 +3,7 @@
 *.pdf
 videos/
 
-# Áudios gerados localmente (manifest.json fica versionado)
-audios/*.mp3
+# Áudios gerados localmente — MP3 devem ir para o GitHub Pages
 audios/.text-hashes.json
 .env
 .env.local

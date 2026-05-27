@@ -521,9 +521,17 @@
 
       .video-wrap {
         max-width: 100%;
+        width: 100%;
+      }
+
+      .video-slide .content-area {
+        width: 100% !important;
+        align-self: stretch !important;
       }
 
       .video-box {
+        width: 100% !important;
+        max-width: 100% !important;
         border-radius: 10px;
       }
 
@@ -572,6 +580,21 @@
       #s2b .slide-title span {
         display: block !important;
         margin-top: 2px;
+      }
+
+      /* Slide s22b — Proibições (mobile portrait) */
+      #s22b .top-bar {
+        padding: 12px 175px 0 14px !important;
+        flex-shrink: 0;
+      }
+
+      #s22b .slide-title {
+        font-size: 17px !important;
+        margin-top: 4px !important;
+        line-height: 1.3 !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+        width: 100% !important;
       }
 
       #s2b .content-area {
@@ -1936,6 +1959,1109 @@
       background: rgba(255, 0, 84, 0.3);
     }
 
+    /* ── S22b: Práticas proibidas na operação ── */
+    #s22b {
+      overflow: hidden;
+      align-items: stretch;
+    }
+
+    #s22b .top-bar {
+      flex-shrink: 0;
+      width: 100%;
+      align-self: stretch;
+      box-sizing: border-box;
+    }
+
+    #s22b .slide-title {
+      margin-top: 4px;
+    }
+
+    #s22b .content-area {
+      flex: 1;
+      min-height: 0;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 96px;
+    }
+
+    #s22b .proib-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      flex: 0 1 auto;
+    }
+
+    .proib-intro {
+      width: 100%;
+      text-align: center;
+      font-size: clamp(15px, 2vw, 19px);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0;
+      line-height: 1.5;
+      flex-shrink: 0;
+    }
+
+    .proib-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .proib-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 22px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 0, 84, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: 4px solid var(--red);
+      border-radius: 16px;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .proib-item:hover {
+      transform: translateX(4px);
+      border-color: rgba(255, 0, 84, 0.35);
+      background: rgba(255, 0, 84, 0.08);
+    }
+
+    .proib-letter {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--red), var(--red-dk));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 18px;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 0, 84, 0.35);
+    }
+
+    .proib-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .proib-body p {
+      margin: 0;
+      font-size: clamp(14px, 1.75vw, 17px);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .proib-icon {
+      flex-shrink: 0;
+      font-size: 30px;
+      line-height: 1;
+      opacity: 0.9;
+    }
+
+    @media (min-width: 769px) {
+      #s22b .slide-title {
+        font-size: clamp(22px, 3.2vh, 30px);
+        margin-top: 2px;
+        line-height: 1.15;
+      }
+
+      #s22b .content-area {
+        overflow: hidden !important;
+        flex: 1;
+        min-height: 0;
+        padding: 10px 28px 104px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #s22b .proib-content {
+        height: auto;
+        max-height: calc(100% - 8px);
+        max-width: 1240px;
+        width: 100%;
+        gap: 18px;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: center;
+        box-sizing: border-box;
+        transform: translateY(-2vh);
+      }
+
+      .proib-intro {
+        font-size: 21px;
+        line-height: 1.4;
+      }
+
+      .proib-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        gap: 16px;
+        width: 100%;
+        flex: unset;
+        min-height: 0;
+        align-items: stretch;
+      }
+
+      .proib-item-wide {
+        grid-column: 1 / -1;
+      }
+
+      .proib-item {
+        padding: 20px 26px;
+        gap: 18px;
+        border-radius: 16px;
+        border-left-width: 5px;
+        align-items: center;
+        min-height: 100%;
+        box-sizing: border-box;
+      }
+
+      .proib-letter {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        border-radius: 13px;
+      }
+
+      .proib-body p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .proib-icon {
+        font-size: 34px;
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 769px) and (max-height: 820px) {
+      #s22b .proib-content {
+        gap: 14px;
+        padding-top: 0;
+        transform: translateY(-1vh);
+      }
+
+      .proib-intro {
+        font-size: 18px;
+      }
+
+      .proib-list {
+        gap: 12px;
+      }
+
+      .proib-item {
+        padding: 16px 20px;
+        gap: 16px;
+      }
+
+      .proib-letter {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+
+      .proib-body p {
+        font-size: 16px;
+        line-height: 1.48;
+      }
+
+      .proib-icon {
+        font-size: 28px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-height: 700px) {
+      #s22b .slide-title {
+        font-size: 20px;
+      }
+
+      #s22b .proib-content {
+        gap: 6px;
+        transform: none;
+      }
+
+      .proib-list {
+        gap: 6px;
+      }
+
+      .proib-item {
+        padding: 9px 12px;
+      }
+
+      .proib-body p {
+        font-size: 12.5px;
+        line-height: 1.4;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #s22b {
+        overflow: hidden;
+      }
+
+      #s22b .top-bar {
+        padding: 12px 175px 0 14px !important;
+      }
+
+      #s22b .slide-title {
+        font-size: 17px !important;
+        margin-top: 4px !important;
+        line-height: 1.3 !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+        width: 100% !important;
+      }
+
+      #s22b .content-area {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        flex: 1;
+        min-height: 0;
+        padding: 12px 14px 72px !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      #s22b .proib-content {
+        gap: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+      }
+
+      #s22b .proib-intro {
+        font-size: 14px !important;
+        line-height: 1.45;
+        text-align: center;
+      }
+
+      #s22b .proib-list {
+        gap: 10px;
+      }
+
+      #s22b .proib-item {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border-left-width: 4px;
+      }
+
+      #s22b .proib-letter {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+        border-radius: 10px;
+      }
+
+      #s22b .proib-body p {
+        font-size: 12.5px !important;
+        line-height: 1.45 !important;
+      }
+
+      #s22b .proib-icon {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) and (max-height: 740px) {
+      #s22b .proib-content {
+        gap: 10px;
+      }
+
+      #s22b .proib-list {
+        gap: 8px;
+      }
+
+      #s22b .proib-item {
+        padding: 10px 12px;
+        gap: 10px;
+      }
+
+      #s22b .proib-body p {
+        font-size: 11.5px !important;
+        line-height: 1.4 !important;
+      }
+    }
+
+    /* ── S25: Distância segura — rede elétrica ── */
+    #s25 {
+      overflow: hidden;
+    }
+
+    #s25 .top-bar {
+      flex-shrink: 0;
+      padding: 22px 120px 0 28px;
+    }
+
+    #s25 .slide-title {
+      margin-top: 8px;
+      margin-bottom: 10px;
+      font-size: clamp(16px, 2.4vw, 24px);
+    }
+
+    #s25 .content-area {
+      overflow: hidden !important;
+      min-height: 0;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 18px 28px 88px;
+    }
+
+    #s25 .elec-safe-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 22px;
+      padding-bottom: 8px;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      flex: 0 1 auto;
+      min-height: 0;
+    }
+
+    .elec-alert-banner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      padding: 12px 16px 12px 14px;
+      border-radius: 14px;
+      background:
+        radial-gradient(ellipse at 0% 50%, rgba(255, 0, 84, 0.14), transparent 60%),
+        linear-gradient(135deg, rgba(255, 0, 84, 0.08), rgba(18, 18, 18, 0.95));
+      border: 1px solid rgba(255, 0, 84, 0.32);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .elec-alert-banner::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--red-lt), var(--red-dk));
+    }
+
+    .elec-alert-side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 2px 0 8px;
+    }
+
+    .elec-alert-icon {
+      font-size: clamp(22px, 2.8vw, 28px);
+      line-height: 1;
+      filter: drop-shadow(0 0 10px rgba(255, 0, 84, 0.45));
+    }
+
+    .elec-alert-badge {
+      flex-shrink: 0;
+      font-family: var(--font-h);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #fff;
+      background: linear-gradient(135deg, var(--red), var(--red-dk));
+      padding: 5px 10px;
+      border-radius: 999px;
+      animation: elecPulse 2.4s ease-in-out infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes elecPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 0, 84, 0.45); }
+      50% { box-shadow: 0 0 0 8px rgba(255, 0, 84, 0); }
+    }
+
+    .elec-alert-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .elec-alert-lead {
+      margin: 0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .elec-alert-highlight {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .elec-3m-value {
+      font-family: var(--font-h);
+      font-size: clamp(22px, 2.8vw, 28px);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--red-lt);
+      text-shadow: 0 0 16px rgba(255, 0, 84, 0.35);
+    }
+
+    .elec-3m-unit {
+      font-family: var(--font-h);
+      font-size: clamp(13px, 1.4vw, 16px);
+      font-weight: 800;
+      color: var(--red-lt);
+    }
+
+    .elec-alert-message {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 6px;
+      margin: 0;
+    }
+
+    .elec-alert-text {
+      margin: 0;
+      font-size: clamp(13px, 1.4vw, 15px);
+      line-height: 1.35;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .elec-alert-text strong {
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .elec-alert-foot {
+      margin: 2px 0 0;
+      padding: 0;
+      border: none;
+      background: none;
+      font-size: 11px;
+      line-height: 1.35;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    @media (min-width: 769px) {
+      .elec-alert-banner {
+        padding: 14px 20px 14px 16px;
+        gap: 14px;
+      }
+
+      .elec-alert-icon {
+        font-size: clamp(26px, 2.2vw, 32px);
+      }
+
+      .elec-alert-badge {
+        font-size: 10px;
+        padding: 6px 12px;
+      }
+
+      .elec-alert-lead {
+        font-size: 11px;
+      }
+
+      .elec-3m-value {
+        font-size: clamp(28px, 2.4vw, 34px);
+      }
+
+      .elec-3m-unit {
+        font-size: clamp(15px, 1.5vw, 19px);
+      }
+
+      .elec-alert-text {
+        font-size: clamp(15px, 1.5vw, 18px);
+      }
+
+      .elec-alert-foot {
+        font-size: 13px;
+      }
+    }
+
+    .elec-safe-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(16px, 2.5vw, 28px);
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .elec-danger-sign {
+      flex: 0 0 auto;
+      width: min(100%, 150px);
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+      border: 2px solid #111;
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease;
+    }
+
+    .elec-danger-sign:hover {
+      transform: rotate(0deg) scale(1.03);
+    }
+
+    .elec-danger-top {
+      background: #e60000;
+      color: #fff;
+      text-align: center;
+      font-family: var(--font-h);
+      font-weight: 900;
+      font-size: clamp(13px, 1.6vw, 17px);
+      letter-spacing: 0.06em;
+      padding: 7px 6px;
+      border-radius: 999px;
+      margin: 8px 10px 6px;
+    }
+
+    .elec-danger-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 10px 10px;
+      font-family: var(--font-h);
+      font-weight: 900;
+      font-size: clamp(11px, 1.4vw, 14px);
+      line-height: 1.1;
+      color: #111;
+      text-align: center;
+    }
+
+    .elec-skull {
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1;
+    }
+
+    .elec-photo-wrap {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex: 0 1 auto;
+      width: fit-content;
+      max-width: min(calc(100vw - 260px), 700px);
+      max-height: min(calc(100vh - 230px), 520px);
+      line-height: 0;
+    }
+
+    .elec-photo-wrap img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: min(calc(100vw - 260px), 700px);
+      max-height: min(calc(100vh - 230px), 520px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: 769px) {
+      .elec-safe-grid {
+        flex-wrap: nowrap;
+      }
+
+      .elec-danger-sign {
+        flex-shrink: 0;
+        width: min(100%, 165px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #s25 .content-area {
+        padding-top: 14px;
+      }
+
+      #s25 .elec-safe-content {
+        gap: 10px;
+        padding-top: 18px;
+        padding-bottom: 6px;
+        justify-content: flex-start;
+      }
+
+      .elec-safe-grid {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .elec-alert-banner {
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        padding: 10px 12px 10px 12px;
+        text-align: left;
+      }
+
+      .elec-alert-side {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 0 0 6px;
+        gap: 6px;
+      }
+
+      .elec-alert-message {
+        justify-content: flex-start;
+      }
+
+      .elec-alert-foot {
+        text-align: left;
+      }
+
+      .elec-danger-sign {
+        max-width: 140px;
+        margin: 0 auto;
+      }
+
+      .elec-photo-wrap {
+        width: fit-content;
+        max-width: min(100%, 92vw);
+        max-height: min(42vh, calc(100vh - 280px), 360px);
+      }
+
+      .elec-photo-wrap img {
+        width: auto;
+        height: auto;
+        max-width: min(100%, 92vw);
+        max-height: min(42vh, calc(100vh - 280px), 360px);
+      }
+    }
+
+    @media (min-width: 769px) and (max-height: 820px) {
+      #s25 .content-area {
+        padding-top: 14px;
+      }
+
+      #s25 .elec-safe-content {
+        gap: 8px;
+        padding-top: 16px;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+      }
+
+      #s25 .slide-title {
+        font-size: clamp(15px, 2vw, 20px);
+      }
+
+      .elec-3m-value {
+        font-size: 22px;
+      }
+
+      .elec-3m-unit {
+        font-size: 13px;
+      }
+
+      .elec-photo-wrap {
+        width: fit-content;
+        max-width: min(calc(100vw - 240px), 560px);
+        max-height: min(calc(100vh - 210px), 400px);
+      }
+
+      .elec-photo-wrap img {
+        width: auto;
+        height: auto;
+        max-width: min(calc(100vw - 240px), 560px);
+        max-height: min(calc(100vh - 210px), 400px);
+      }
+
+      .elec-danger-sign {
+        width: min(100%, 130px);
+      }
+    }
+
+    @media (max-height: 700px) {
+      #s25 .top-bar {
+        padding-top: 12px;
+      }
+
+      #s25 .section-tag {
+        font-size: 10px;
+        padding: 4px 10px;
+      }
+
+      #s25 .content-area {
+        padding-top: 12px;
+      }
+
+      #s25 .elec-safe-content {
+        gap: 6px;
+        padding-top: 14px;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+      }
+
+      .elec-alert-banner {
+        padding: 8px 12px 8px 12px;
+      }
+
+      .elec-safe-grid {
+        gap: 10px;
+      }
+    }
+
+    /* ── Desafios Módulo 3 (s26) ── */
+    #s26 {
+      overflow: hidden;
+    }
+
+    #s26 .top-bar {
+      flex-shrink: 0;
+      padding: 22px 120px 0 28px;
+    }
+
+    #s26 .slide-title {
+      font-size: clamp(18px, 2.6vw, 24px);
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    #s26 .content-area {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      padding: 6px clamp(16px, 3vw, 28px) 96px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #s26 .mod3-hub-wrap {
+      width: 100%;
+      max-width: min(680px, 92vw);
+      max-height: calc(100dvh - 210px);
+      margin: 0 auto;
+    }
+
+    #s26 .mod3-shell {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 0, 84, 0.1), transparent 55%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: clamp(18px, 2.5vw, 26px);
+      padding: clamp(24px, 4vh, 36px) clamp(22px, 3vw, 28px);
+      box-shadow:
+        0 20px 48px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      max-height: calc(100dvh - 210px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #s26 .mod3-intro-icon {
+      margin: 0 auto 16px;
+      width: clamp(72px, 10vw, 88px);
+      height: clamp(72px, 10vw, 88px);
+      font-size: clamp(36px, 5vw, 44px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 0, 84, 0.12);
+      border: 1px solid rgba(255, 0, 84, 0.28);
+      box-shadow: 0 0 32px rgba(255, 0, 84, 0.16);
+    }
+
+    #s26 .mod3-intro-title {
+      font-family: var(--font-h);
+      font-size: clamp(22px, 3.2vw, 28px);
+      color: var(--white);
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    #s26 .mod3-intro-desc {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(14px, 1.8vw, 16px);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #s26 .mod3-steps {
+      display: flex;
+      gap: 8px;
+      margin-bottom: clamp(16px, 2.4vh, 22px);
+    }
+
+    #s26 .mod3-step {
+      flex: 1;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    #s26 .mod3-step.cur {
+      background: linear-gradient(90deg, var(--red), var(--gold));
+      box-shadow: 0 0 12px rgba(255, 0, 84, 0.45);
+    }
+
+    #s26 .mod3-step.done {
+      background: #27ae60;
+    }
+
+    #s26 .mod3-game-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: clamp(16px, 2.4vh, 22px);
+      gap: 12px;
+    }
+
+    #s26 .mod3-game-tag {
+      font-family: var(--font-h);
+      font-size: clamp(11px, 1.4vw, 13px);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    #s26 .mod3-game-counter {
+      font-family: var(--font-h);
+      font-size: clamp(14px, 1.8vw, 16px);
+      font-weight: 800;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      padding: 4px 14px;
+      flex-shrink: 0;
+    }
+
+    #s26 .mod3-card {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: clamp(16px, 2vw, 22px);
+      padding: clamp(32px, 5vh, 48px) clamp(22px, 3vw, 28px);
+      min-height: clamp(128px, 18vh, 168px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      margin-bottom: clamp(18px, 2.6vh, 24px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #s26 .mod3-card.mod3-ok {
+      border-color: rgba(39, 174, 96, 0.6);
+      box-shadow: 0 0 24px rgba(39, 174, 96, 0.12);
+    }
+
+    #s26 .mod3-card-text {
+      font-family: var(--font-h);
+      font-size: clamp(17px, 2.6vw, 22px);
+      font-weight: 800;
+      color: var(--cream);
+      line-height: 1.38;
+      max-width: 640px;
+    }
+
+    #s26 .mod3-binary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(12px, 2vw, 16px);
+      width: 100%;
+    }
+
+    #s26 .mod3-btn {
+      border: none;
+      border-radius: clamp(14px, 1.8vw, 18px);
+      padding: clamp(20px, 3vh, 28px) clamp(16px, 2vw, 20px);
+      min-height: clamp(88px, 12vh, 112px);
+      width: 100%;
+      cursor: pointer;
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: clamp(13px, 1.8vw, 16px);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #fff;
+      transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #s26 .mod3-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 45%);
+      pointer-events: none;
+    }
+
+    #s26 .mod3-btn span {
+      display: block;
+      font-size: clamp(26px, 4vw, 34px);
+      margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #s26 .mod3-btn:hover {
+      filter: brightness(1.06);
+    }
+
+    #s26 .mod3-btn:active {
+      transform: scale(0.98);
+    }
+
+    #s26 .mod3-btn-ok {
+      background: linear-gradient(145deg, #1a9c52, #2ecc71);
+      box-shadow: 0 8px 24px rgba(46, 204, 113, 0.28);
+    }
+
+    #s26 .mod3-btn-nok {
+      background: linear-gradient(145deg, #c0392b, #e74c3c);
+      box-shadow: 0 8px 24px rgba(231, 76, 60, 0.28);
+    }
+
+    #s26 .mod3-feedback {
+      min-height: 28px;
+      text-align: center;
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: clamp(11px, 1.4vw, 13px);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: clamp(10px, 1.2vh, 14px);
+    }
+
+    #s26 .mod3-hint {
+      text-align: center;
+      font-size: clamp(11px, 1.3vw, 13px);
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: clamp(10px, 1.2vh, 12px);
+    }
+
+    #s26 .mod3-result-panel {
+      text-align: center;
+      padding: clamp(16px, 2.5vh, 24px) 0;
+    }
+
+    #s26 .mod3-result-panel .r-icon {
+      font-size: clamp(48px, 7vw, 60px);
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 769px) {
+      #s26 .mod3-hub-wrap {
+        max-width: min(720px, 88vw);
+      }
+
+      #s26 .mod3-shell {
+        padding: 32px 28px;
+      }
+
+      #s26 .mod3-binary {
+        gap: 14px;
+      }
+
+      #s26 .mod3-btn {
+        min-height: 112px;
+        padding: 24px 20px;
+        font-size: 15px;
+      }
+
+      #s26 .mod3-btn span {
+        font-size: 34px;
+        margin-bottom: 8px;
+      }
+
+      #s26 .mod3-card {
+        min-height: 156px;
+        padding: 40px 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #s26 .mod3-binary {
+        grid-template-columns: 1fr;
+      }
+
+      #s26 .mod3-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        text-align: left;
+        min-height: 64px;
+        padding: 12px 16px;
+      }
+
+      #s26 .mod3-btn span {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-height: 760px) {
+      #s26 .mod3-hub-wrap,
+      #s26 .mod3-shell {
+        max-height: calc(100dvh - 185px);
+      }
+
+      #s26 .mod3-shell {
+        padding: 14px 16px;
+      }
+
+      #s26 .mod3-card {
+        padding: 18px 16px;
+        min-height: 92px;
+        margin-bottom: 10px;
+      }
+
+      #s26 .mod3-card-text {
+        font-size: clamp(16px, 2.4vw, 19px);
+      }
+
+      #s26 .mod3-btn {
+        min-height: 60px;
+        padding: 12px 14px;
+      }
+
+      #s26 .mod3-btn span {
+        font-size: 24px;
+      }
+
+      #s26 .mod3-hint,
+      #s26 .mod3-feedback {
+        margin-top: 8px;
+      }
+    }
+
     /* ============================================================
    SLIDE 1 — CAPA
    ============================================================ */
@@ -2115,8 +3241,14 @@
       margin: 0 auto;
     }
 
+    .video-slide .content-area {
+      width: 100%;
+      align-self: stretch;
+    }
+
     .video-box {
       width: 100%;
+      max-width: 100%;
       aspect-ratio: 16/9;
       position: relative;
       overflow: hidden;
@@ -2129,10 +3261,9 @@
 
     .video-box iframe {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
       z-index: 2;
       border: 0;
       background: #000;
@@ -2151,6 +3282,15 @@
       right: 12px !important;
       top: 12px !important;
       z-index: 20;
+    }
+
+    .video-box.video-end-mask::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 15;
+      background: #000;
+      pointer-events: none;
     }
 
     .scanlines {
@@ -4477,7 +5617,7 @@
           <div class="video-wrap">
             <div class="video-box">
               <iframe
-                src="https://player.vimeo.com/video/1195370188?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
+                src="https://player.vimeo.com/video/1195697530?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Regras de Movimentação Segura">
               </iframe>
@@ -4486,6 +5626,198 @@
         </div>
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
             <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S22b: Práticas proibidas na operação ── -->
+      <section class="slide" id="s22b">
+        <div class="top-bar"><span class="section-tag">🚫 Proibições</span>
+          <div class="slide-title">Práticas <span>Proibidas</span></div>
+        </div>
+        <div class="content-area proib-content">
+          <p class="proib-intro">Na operação da PEMT, é vedado:</p>
+          <div class="proib-list">
+            <div class="proib-item">
+              <span class="proib-letter">a</span>
+              <div class="proib-body">
+                <p>O uso de pranchas, escadas e outros dispositivos que visem atingir maior altura ou distância sobre a mesma.</p>
+              </div>
+              <span class="proib-icon" aria-hidden="true">🪜</span>
+            </div>
+            <div class="proib-item">
+              <span class="proib-letter">b</span>
+              <div class="proib-body">
+                <p>A sua utilização como guindaste.</p>
+              </div>
+              <span class="proib-icon" aria-hidden="true">🏗️</span>
+            </div>
+            <div class="proib-item">
+              <span class="proib-letter">c</span>
+              <div class="proib-body">
+                <p>A realização de qualquer trabalho sob condições climáticas que exponham trabalhadores a riscos.</p>
+              </div>
+              <span class="proib-icon" aria-hidden="true">🌪️</span>
+            </div>
+            <div class="proib-item">
+              <span class="proib-letter">e</span>
+              <div class="proib-body">
+                <p>O transporte de trabalhadores e materiais não relacionados aos serviços em execução.</p>
+              </div>
+              <span class="proib-icon" aria-hidden="true">🚫</span>
+            </div>
+            <div class="proib-item proib-item-wide">
+              <span class="proib-letter">d</span>
+              <div class="proib-body">
+                <p>A operação de equipamento em situações que contrariem as especificações do fabricante quanto à velocidade do ar, inclinação da plataforma em relação ao solo e proximidade a redes de energia elétrica.</p>
+              </div>
+              <span class="proib-icon" aria-hidden="true">⚡</span>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S23: VÍDEO — Atenção ao Clima e ao Vento ── -->
+      <section class="slide video-slide" id="s23">
+        <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
+          <div class="slide-title">Atenção ao <span>Clima e ao Vento</span></div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe
+                src="https://player.vimeo.com/video/1195697528?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Atenção ao Clima e ao Vento">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S24: VÍDEO — Redes Elétricas e Riscos Aéreos ── -->
+      <section class="slide video-slide" id="s24">
+        <div class="top-bar"><span class="section-tag">📹 Vídeo Aula</span>
+          <div class="slide-title">Redes Elétricas e <span>Riscos Aéreos</span></div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe
+                src="https://player.vimeo.com/video/1195697532?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Redes Elétricas e Riscos Aéreos">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S25: Distância segura da rede elétrica ── -->
+      <section class="slide" id="s25">
+        <div class="top-bar"><span class="section-tag">⚡ Segurança Elétrica</span>
+          <div class="slide-title">Distância Segura da <span>Rede Elétrica</span></div>
+        </div>
+        <div class="content-area elec-safe-content">
+          <div class="elec-alert-banner">
+            <div class="elec-alert-side">
+              <span class="elec-alert-icon" aria-hidden="true">⚡</span>
+              <span class="elec-alert-badge">ATENÇÃO</span>
+            </div>
+            <div class="elec-alert-main">
+              <p class="elec-alert-lead">Distância mínima recomendada</p>
+              <p class="elec-alert-message">
+                <span class="elec-3m-value">3</span>
+                <span class="elec-3m-unit">metros</span>
+                <span class="elec-alert-text">de qualquer <strong>rede elétrica</strong>.</span>
+              </p>
+              <p class="elec-alert-foot">📖 Siga as recomendações no manual do maquinário.</p>
+            </div>
+          </div>
+
+          <div class="elec-safe-grid">
+            <div class="elec-danger-sign" aria-hidden="true">
+              <div class="elec-danger-top">PERIGO</div>
+              <div class="elec-danger-body">
+                <span>ALTA<br>TENSÃO</span>
+                <span class="elec-skull">☠️</span>
+              </div>
+            </div>
+            <div class="elec-photo-wrap">
+              <img src="img/redeeletrica.png" alt="PEMT em operação próximo a rede elétrica">
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S26: DESAFIOS — Módulo 3 ── -->
+      <section class="slide" id="s26">
+        <div class="top-bar">
+          <span class="section-tag">🎮 Desafios</span>
+          <div class="slide-title">Permitido ou <span>Proibido</span></div>
+        </div>
+        <div class="content-area">
+
+          <div id="mod3-hub-intro" class="mod3-hub-wrap mod3-shell" style="text-align:center; animation: fadeIn 0.8s ease;">
+            <div class="mod3-intro-icon">🚦</div>
+            <h3 class="mod3-intro-title">Permitido ou Proibido</h3>
+            <p class="mod3-intro-desc">
+              Decida se cada prática pode ou não ser realizada na operação da PEMT.
+              <strong>5 situações</strong> sobre movimentação, clima e segurança elétrica.
+            </p>
+            <button class="btn-start" style="padding: 14px 36px; font-size: 14px; text-transform: uppercase;"
+              onclick="startMod3Games()">INICIAR JOGO</button>
+          </div>
+
+          <div id="mod3-game1" class="mod3-hub-wrap mod3-shell" style="display:none;">
+            <div class="mod3-steps" id="mod3-progress-steps" aria-hidden="true"></div>
+            <div class="mod3-game-head">
+              <span class="mod3-game-tag">🚦 Permitido ou Proibido</span>
+              <span class="mod3-game-counter" id="mod3-g1-counter">1 / 5</span>
+            </div>
+            <div id="mod3-g1-card" class="mod3-card">
+              <p id="mod3-g1-text" class="mod3-card-text">...</p>
+            </div>
+            <div class="mod3-binary">
+              <button type="button" class="mod3-btn mod3-btn-ok" onclick="handleMod3Binary(true)">
+                <span>✅</span>Permitido
+              </button>
+              <button type="button" class="mod3-btn mod3-btn-nok" onclick="handleMod3Binary(false)">
+                <span>🚫</span>Proibido
+              </button>
+            </div>
+            <p class="mod3-hint">Toque na opção correta para avançar</p>
+            <div id="mod3-g1-feedback" class="mod3-feedback"></div>
+          </div>
+
+          <div id="mod3-hub-result" class="mod3-hub-wrap mod3-shell mod3-result-panel"
+            style="display:none; animation: slideUp 0.6s ease;">
+            <div class="r-icon">🏆</div>
+            <h3 style="font-family:var(--font-h); font-size: clamp(26px, 4vw, 34px); color:var(--gold); margin-bottom:10px; font-weight:900;">
+              Jogo Concluído!</h3>
+            <div class="r-status ap" style="display:inline-block; padding: 8px 22px; font-size: 14px; margin-bottom:16px; font-weight:700;">
+              Módulo 3 Validado
+            </div>
+            <p id="mod3-result-msg" style="color:rgba(255,255,255,0.88); font-size:clamp(15px,2vw,17px); line-height:1.6; margin-bottom:24px; max-width:520px; margin-left:auto; margin-right:auto;"></p>
+            <button class="btn-retry"
+              style="background: var(--white); color: var(--black); font-weight: 800; border-radius: 99px; padding: 12px 32px;"
+              onclick="resetMod3Games()">JOGAR NOVAMENTE</button>
+          </div>
+
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C480,10 960,85 1440,30 L1440,100 L0,100 Z" fill="rgba(255,0,84,0.07)" />
           </svg></div>
       </section>
 
@@ -4670,14 +6002,31 @@
     }
 
     function resetVimeoAfterEnd(player, box) {
+      if (!player || !box || box.dataset.vimeoResetting === '1') return;
+      box.dataset.vimeoResetting = '1';
       markVideoComplete(box);
-      player.setCurrentTime(0).then(() => player.pause()).catch(() => {
-        player.unload().catch(() => {});
-      });
+      box.classList.add('video-end-mask');
+
+      player.pause().catch(() => {})
+        .then(() => player.setCurrentTime(0))
+        .then(() => player.pause())
+        .catch(() => player.unload().catch(() => {}))
+        .finally(() => {
+          box.classList.remove('video-end-mask');
+          delete box.dataset.vimeoResetting;
+        });
+
       const bgMusic = document.getElementById('bg-music');
       if (bgMusic && typeof musicEnabled !== 'undefined' && musicEnabled) {
         bgMusic.play().catch(e => console.log('Music play error:', e));
       }
+    }
+
+    function resizeVimeoPlayer(player) {
+      if (!player) return;
+      requestAnimationFrame(() => {
+        player.resize().catch(() => {});
+      });
     }
 
     function setupVimeoIframe(iframe) {
@@ -4703,6 +6052,11 @@
       }
 
       vimeoPlayers.set(iframe, player);
+
+      player.on('loaded', () => resizeVimeoPlayer(player));
+      resizeVimeoPlayer(player);
+      setTimeout(() => resizeVimeoPlayer(player), 250);
+      setTimeout(() => resizeVimeoPlayer(player), 900);
 
       player.on('play', () => {
         const bgMusic = document.getElementById('bg-music');
@@ -4738,7 +6092,10 @@
     function initVimeoOnActiveSlide(slide) {
       if (!slide) return;
       const iframe = slide.querySelector('.video-box iframe[src*="vimeo.com"]');
-      if (iframe) setupVimeoIframe(iframe);
+      if (!iframe) return;
+      const player = setupVimeoIframe(iframe) || vimeoPlayers.get(iframe);
+      resizeVimeoPlayer(player);
+      setTimeout(() => resizeVimeoPlayer(player), 300);
     }
 
     let currentPemtFCard = 0;
@@ -4901,6 +6258,9 @@
       }
       if (slide.id === 's21') { // Triagem PEMT — Módulo 2
         return q2_done;
+      }
+      if (slide.id === 's26') { // Desafios — Módulo 3
+        return q3_done;
       }
       if (slide.id === 's14b') {
         const fcards = document.querySelectorAll('#s14b .fcard');
@@ -5306,6 +6666,140 @@
       updateNextButton();
     }
 
+    /* ══════════════════════════════════════════
+       JOGO MÓDULO 3 — Permitido ou Proibido
+       ══════════════════════════════════════════ */
+    let q3_done = false;
+    let mod3G1Idx = 0;
+    let mod3G1Busy = false;
+    let mod3TotalMistakes = 0;
+    const MOD3_ADVANCE_MS = 320;
+    const MOD3_ERROR_MS = 280;
+
+    const mod3BinaryDeck = [
+      {
+        text: 'Usar escada ou prancha no cesto para ganhar altura.',
+        allowed: false,
+        tip: 'Proibido — não use dispositivos extras no cesto.'
+      },
+      {
+        text: 'Utilizar a PEMT como guindaste para içar materiais.',
+        allowed: false,
+        tip: 'Proibido — a PEMT não substitui guindaste.'
+      },
+      {
+        text: 'Operar durante tempestade com risco para os trabalhadores.',
+        allowed: false,
+        tip: 'Proibido — pare diante de condições climáticas de risco.'
+      },
+      {
+        text: 'Consultar o manual do fabricante antes de operar perto de rede elétrica.',
+        allowed: true,
+        tip: 'Permitido — o manual define limites de distância, vento e inclinação.'
+      },
+      {
+        text: 'Transportar colegas no cesto que não participam do serviço.',
+        allowed: false,
+        tip: 'Proibido — só operadores envolvidos no serviço em execução.'
+      }
+    ];
+
+    function showMod3Panel(id) {
+      ['mod3-hub-intro', 'mod3-game1', 'mod3-hub-result'].forEach((panelId) => {
+        const el = document.getElementById(panelId);
+        if (el) el.style.display = panelId === id ? 'block' : 'none';
+      });
+    }
+
+    function updateMod3Progress() {
+      const container = document.getElementById('mod3-progress-steps');
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < mod3BinaryDeck.length; i++) {
+        const step = document.createElement('div');
+        step.className = 'mod3-step';
+        if (i < mod3G1Idx) step.classList.add('done');
+        if (i === mod3G1Idx) step.classList.add('cur');
+        container.appendChild(step);
+      }
+    }
+
+    function startMod3Games() {
+      q3_done = false;
+      mod3G1Idx = 0;
+      mod3G1Busy = false;
+      mod3TotalMistakes = 0;
+      showMod3Panel('mod3-game1');
+      renderMod3Game1();
+      updateNextButton();
+    }
+
+    function renderMod3Game1() {
+      if (mod3G1Idx >= mod3BinaryDeck.length) {
+        finishMod3Games();
+        return;
+      }
+      const item = mod3BinaryDeck[mod3G1Idx];
+      document.getElementById('mod3-g1-text').textContent = item.text;
+      document.getElementById('mod3-g1-counter').textContent = `${mod3G1Idx + 1} / ${mod3BinaryDeck.length}`;
+      const fb = document.getElementById('mod3-g1-feedback');
+      if (fb) fb.textContent = '';
+      const card = document.getElementById('mod3-g1-card');
+      if (card) card.classList.remove('mod3-ok');
+      mod3G1Busy = false;
+      updateMod3Progress();
+    }
+
+    function handleMod3Binary(allowed) {
+      if (mod3G1Busy || mod3G1Idx >= mod3BinaryDeck.length) return;
+      mod3G1Busy = true;
+      const item = mod3BinaryDeck[mod3G1Idx];
+      const fb = document.getElementById('mod3-g1-feedback');
+      const card = document.getElementById('mod3-g1-card');
+      const correct = allowed === item.allowed;
+
+      if (correct) {
+        playBeep('ok');
+        if (fb) { fb.textContent = '✓ ' + item.tip; fb.style.color = '#2ecc71'; }
+        if (card) card.classList.add('mod3-ok');
+        mod3G1Idx++;
+        setTimeout(renderMod3Game1, MOD3_ADVANCE_MS);
+      } else {
+        playBeep('nok');
+        mod3TotalMistakes++;
+        if (fb) {
+          fb.textContent = '✗ ' + (item.allowed ? 'Era PERMITIDO.' : 'Era PROIBIDO.');
+          fb.style.color = 'var(--red)';
+        }
+        if (card) {
+          card.style.animation = 'none';
+          card.offsetHeight;
+          card.style.animation = 'shake 0.4s ease';
+        }
+        setTimeout(() => { mod3G1Busy = false; }, MOD3_ERROR_MS);
+      }
+    }
+
+    function finishMod3Games() {
+      q3_done = true;
+      showMod3Panel('mod3-hub-result');
+      const msg = document.getElementById('mod3-result-msg');
+      if (msg) {
+        msg.textContent = mod3TotalMistakes === 0
+          ? 'Excelente! Você identificou corretamente todas as práticas permitidas e proibidas na operação da PEMT.'
+          : `Você concluiu o jogo com ${mod3TotalMistakes} erro(s). Revise as práticas proibidas do Módulo 3 antes de operar.`;
+      }
+      updateNextButton();
+    }
+
+    function resetMod3Games() {
+      q3_done = false;
+      mod3G1Idx = 0;
+      mod3TotalMistakes = 0;
+      showMod3Panel('mod3-hub-intro');
+      updateNextButton();
+    }
+
     /* Shake animation for errors */
     const style = document.createElement('style');
     style.textContent = `
@@ -5394,13 +6888,16 @@
         if (++vimeoBootAttempts < 30) setTimeout(bootVimeo, 300);
       };
       bootVimeo();
+      window.addEventListener('resize', () => {
+        vimeoPlayers.forEach((player) => resizeVimeoPlayer(player));
+      });
       document.querySelectorAll('.video-play-overlay').forEach(el => el.remove());
 
       updateNextButton();
     });
 
     /* ── TUTORIAL MODAL (recarregar na capa — página 1) ── */
-    const TUTORIAL_VIMEO_ID = '1194825560';
+    const TUTORIAL_VIMEO_ID = '1195407208';
 
     function updateTutorialButtonVisibility() {
       const item = document.getElementById('tutorial-control-item');

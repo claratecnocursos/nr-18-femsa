@@ -36,6 +36,16 @@ const NARRATION_OVERRIDES = {
     'Vídeo aula. Regras Estritas de Manutenção. Assista ao vídeo sobre manutenção preventiva e corretiva.',
   s22:
     'Vídeo aula. Regras de Movimentação Segura. Assista ao vídeo sobre as regras de movimentação segura da PEMT e avance quando concluir.',
+  s22b:
+    'Práticas proibidas na operação da PEMT. É vedado: a) o uso de pranchas, escadas e outros dispositivos que visem atingir maior altura ou distância sobre a mesma; b) a sua utilização como guindaste; c) a realização de qualquer trabalho sob condições climáticas que exponham trabalhadores a riscos; d) a operação de equipamento em situações que contrariem as especificações do fabricante quanto à velocidade do ar, inclinação da plataforma em relação ao solo e proximidade a redes de energia elétrica; e) o transporte de trabalhadores e materiais não relacionados aos serviços em execução.',
+  s23:
+    'Vídeo aula. Atenção ao Clima e ao Vento. Assista ao vídeo sobre os cuidados com condições climáticas e vento na operação da PEMT e avance quando concluir.',
+  s24:
+    'Vídeo aula. Redes Elétricas e Riscos Aéreos. Assista ao vídeo sobre os perigos de redes elétricas e riscos aéreos na operação da PEMT e avance quando concluir.',
+  s25:
+    'Segurança elétrica. Distância segura da rede elétrica. Atenção: recomenda-se uma distância mínima de 3 metros de qualquer rede elétrica. Siga as recomendações no manual do maquinário. Perigo, alta tensão.',
+  s26:
+    'Jogo do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Cinco situações sobre movimentação, clima e segurança elétrica. Conclua o jogo para validar o módulo.',
 };
 
 function cleanText(text) {

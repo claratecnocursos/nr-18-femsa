@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-27T18:11:21.969Z",
+  "generatedAt": "2026-05-27T19:52:02.590Z",
   "source": "index.html",
   "audioDir": "audios",
   "slides": [
@@ -147,9 +147,9 @@
     {
       "index": 20,
       "id": "s26",
-      "title": "Arena de Segurança",
+      "title": "Permitido ou Proibido",
       "file": "audios/s26.mp3",
-      "text": "Desafios do Módulo 3. Arena de Segurança. Três jogos interativos: Luz Verde ou Vermelha — decida se cada prática é permitida ou proibida na PEMT; Radar de Riscos — classifique situações em movimentação, clima ou risco elétrico; Desafio dos 3 Metros — escolha a distância mínima recomendada de qualquer rede elétrica. Conclua os três desafios para validar o módulo."
+      "text": "Desafio do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Cinco situações sobre movimentação, clima e segurança elétrica. Situação 1: Usar escada ou prancha no cesto para ganhar altura. Resposta correta: Proibido. Proibido — não use dispositivos extras no cesto. Situação 2: Utilizar a PEMT como guindaste para içar materiais. Resposta correta: Proibido. Proibido — a PEMT não substitui guindaste. Situação 3: Operar durante tempestade com risco para os trabalhadores. Resposta correta: Proibido. Proibido — pare diante de condições climáticas de risco. Situação 4: Consultar o manual do fabricante antes de operar perto de rede elétrica. Resposta correta: Permitido. Permitido — o manual define limites de distância, vento e inclinação. Situação 5: Transportar colegas no cesto que não participam do serviço. Resposta correta: Proibido. Proibido — só operadores envolvidos no serviço em execução. Conclua o jogo para validar o módulo."
     }
   ]
 }

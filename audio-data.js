@@ -44,8 +44,7 @@ const NARRATION_OVERRIDES = {
     'Vídeo aula. Redes Elétricas e Riscos Aéreos. Assista ao vídeo sobre os perigos de redes elétricas e riscos aéreos na operação da PEMT e avance quando concluir.',
   s25:
     'Segurança elétrica. Distância segura da rede elétrica. Atenção: recomenda-se uma distância mínima de 3 metros de qualquer rede elétrica. Siga as recomendações no manual do maquinário. Perigo, alta tensão.',
-  s26:
-    'Jogo do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Cinco situações sobre movimentação, clima e segurança elétrica. Conclua o jogo para validar o módulo.',
+  s26: null, // montado a partir do deck do jogo Permitido ou Proibido
 };
 
 function cleanText(text) {
@@ -88,6 +87,35 @@ function parseQuizQuestions(html) {
   }
 }
 
+function parseMod3BinaryDeck(html) {
+  const match = html.match(/const\s+mod3BinaryDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildMod3Narration(deck) {
+  if (!deck.length) {
+    return 'Desafio do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Conclua o jogo para validar o módulo.';
+  }
+
+  const parts = [
+    'Desafio do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Cinco situações sobre movimentação, clima e segurança elétrica.',
+  ];
+
+  deck.forEach((item, index) => {
+    const answer = item.allowed ? 'Permitido' : 'Proibido';
+    parts.push(`Situação ${index + 1}: ${cleanText(item.text)} Resposta correta: ${answer}. ${cleanText(item.tip)}`);
+  });
+
+  parts.push('Conclua o jogo para validar o módulo.');
+  return parts.join(' ');
+}
+
 function buildQuizNarration(questions) {
   if (!questions.length) {
     return 'Quiz do Módulo 1. Responda às perguntas sobre os conceitos apresentados no módulo.';
@@ -117,6 +145,7 @@ function buildManifest(htmlPath = HTML_PATH) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const quizQuestions = parseQuizQuestions(html);
+  const mod3Deck = parseMod3BinaryDeck(html);
 
   const slides = [...doc.querySelectorAll('#slides .slide')].map((slide, index) => {
     const id = slide.id || `slide-${index + 1}`;
@@ -124,6 +153,8 @@ function buildManifest(htmlPath = HTML_PATH) {
 
     if (text === null && id === 's7d') {
       text = buildQuizNarration(quizQuestions);
+    } else if (text === null && id === 's26') {
+      text = buildMod3Narration(mod3Deck);
     } else if (text === undefined) {
       text = extractSlideText(slide);
     }

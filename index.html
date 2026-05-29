@@ -1762,16 +1762,10 @@
         margin-top: 0 !important;
       }
 
-      .sum-item:nth-child(4) {
-        grid-column: auto !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-      }
-
       .sum-item:nth-child(5) {
         grid-column: auto !important;
-        align-items: flex-start !important;
-        text-align: left !important;
+        justify-self: stretch !important;
+        width: 100% !important;
       }
     }
 
@@ -1790,16 +1784,10 @@
       overflow: hidden;
     }
 
-    .sum-item:nth-child(4) {
-      grid-column: 1 / -1;
-      align-items: center;
-      text-align: center;
-    }
-
     .sum-item:nth-child(5) {
       grid-column: 1 / -1;
-      align-items: center;
-      text-align: center;
+      justify-self: center;
+      width: calc(50% - 8px);
     }
 
     .sum-item::before {

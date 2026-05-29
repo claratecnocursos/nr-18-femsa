@@ -49,6 +49,17 @@ const NARRATION_OVERRIDES = {
     'Início do Módulo 4. Proibições e Procedimentos Inseguros.',
   's-mod5':
     'Início do Módulo 5. Equipamentos de Proteção Individual.',
+  s33:
+    'Vídeo aula. O que é o EPI e sua Importância. Assista ao vídeo e avance quando concluir.',
+  s34:
+    'Vídeo aula. O Sistema de Proteção Contra Quedas, SPIQ. Assista ao vídeo e avance quando concluir.',
+  s34b:
+    'EPI — Equipamento de Proteção Individual Para Trabalho em Altura. Equipamento de segurança utilizado para proteção contra risco de queda no posicionamento e movimentação nos trabalhos em altura, sendo utilizado em conjunto com cinturão de segurança tipo paraquedista.',
+  s35:
+    'Vídeo aula. Padronização de EPIs na Fábrica. Assista ao vídeo e avance quando concluir.',
+  s36:
+    'Vídeo aula. Responsabilidades do Colaborador. Assista ao vídeo e avance quando concluir.',
+  s31: null, // montado a partir das perguntas do quiz do Módulo 5
   s27:
     'Vídeo aula. Proibições e Gambiarras. O que NUNCA fazer. Assista ao vídeo e avance quando concluir.',
   s28:
@@ -91,6 +102,17 @@ function extractSlideText(slide) {
 
 function parseQuizQuestions(html) {
   const match = html.match(/const\s+q1_questions\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function parseQ5Questions(html) {
+  const match = html.match(/const\s+q5_questions\s*=\s*(\[[\s\S]*?\n\s*\]);/);
   if (!match) return [];
 
   try {
@@ -162,13 +184,13 @@ function buildMod4Narration(deck) {
   return parts.join(' ');
 }
 
-function buildQuizNarration(questions) {
+function buildQuizNarration(questions, moduleNum = 1) {
   if (!questions.length) {
-    return 'Quiz do Módulo 1. Responda às perguntas sobre os conceitos apresentados no módulo.';
+    return `Quiz do Módulo ${moduleNum}. Responda às perguntas sobre os conceitos apresentados no módulo.`;
   }
 
   const parts = [
-    'Quiz do Módulo 1. Responda às três perguntas sobre os conceitos do módulo.',
+    `Quiz do Módulo ${moduleNum}. Responda às ${questions.length} perguntas sobre os conceitos do módulo.`,
   ];
 
   questions.forEach((item, index) => {
@@ -191,6 +213,7 @@ function buildManifest(htmlPath = HTML_PATH) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const quizQuestions = parseQuizQuestions(html);
+  const q5Questions = parseQ5Questions(html);
   const mod3Deck = parseMod3BinaryDeck(html);
   const mod4Deck = parseMod4RiskDeck(html);
 
@@ -199,7 +222,9 @@ function buildManifest(htmlPath = HTML_PATH) {
     let text = NARRATION_OVERRIDES[id];
 
     if (text === null && id === 's7d') {
-      text = buildQuizNarration(quizQuestions);
+      text = buildQuizNarration(quizQuestions, 1);
+    } else if (text === null && id === 's31') {
+      text = buildQuizNarration(q5Questions, 5);
     } else if (text === null && id === 's26') {
       text = buildMod3Narration(mod3Deck);
     } else if (text === null && id === 's30') {

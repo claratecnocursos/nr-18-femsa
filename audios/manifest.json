@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T12:55:24.325Z",
+  "generatedAt": "2026-05-29T19:57:45.620Z",
   "source": "index.html",
   "audioDir": "audios",
   "slides": [
@@ -58,7 +58,7 @@
       "id": "s7d",
       "title": "Quiz — Módulo 1",
       "file": "audios/s7d.mp3",
-      "text": "Quiz do Módulo 1. Responda às três perguntas sobre os conceitos do módulo. Pergunta 1: O que é a PEMT (Plataforma Elevatória Móvel de Trabalho)? Alternativa 1: Equipamento móvel com cesto de trabalho, sustentado por haste ou tesoura, para erguer o trabalhador com segurança Alternativa 2: Veículo autopropelido usado apenas para transporte horizontal de materiais Alternativa 3: Equipamento fixo instalado permanentemente em edifícios Alternativa 4: Ferramenta manual para içamento de cargas no solo Pergunta 2: Quais modelos de plataformas elevatórias você pode encontrar no dia a dia da obra? Alternativa 1: Mastro, Telescópica, Tesoura e Articulada Alternativa 2: Guindaste, Empilhadeira, Betoneira e Grua Alternativa 3: Fixa, Suspensa, Flutuante e Industrial Alternativa 4: Vertical, Horizontal, Inclinada e Circular Pergunta 3: Sobre os requisitos de fornecimento e manuais da PEMT, qual afirmativa está correta? Alternativa 1: A máquina deve ser inspecionada antes da entrega; manuais disponíveis no local e avisos em português Alternativa 2: A inspeção só é necessária após o primeiro uso na obra Alternativa 3: Os manuais podem ficar arquivados na sede da locadora Alternativa 4: Os avisos de segurança podem estar em qualquer idioma"
+      "text": "Quiz do Módulo 1. Responda às 3 perguntas sobre os conceitos do módulo. Pergunta 1: O que é a PEMT (Plataforma Elevatória Móvel de Trabalho)? Alternativa 1: Equipamento móvel com cesto de trabalho, sustentado por haste ou tesoura, para erguer o trabalhador com segurança Alternativa 2: Veículo autopropelido usado apenas para transporte horizontal de materiais Alternativa 3: Equipamento fixo instalado permanentemente em edifícios Alternativa 4: Ferramenta manual para içamento de cargas no solo Pergunta 2: Quais modelos de plataformas elevatórias você pode encontrar no dia a dia da obra? Alternativa 1: Mastro, Telescópica, Tesoura e Articulada Alternativa 2: Guindaste, Empilhadeira, Betoneira e Grua Alternativa 3: Fixa, Suspensa, Flutuante e Industrial Alternativa 4: Vertical, Horizontal, Inclinada e Circular Pergunta 3: Sobre os requisitos de fornecimento e manuais da PEMT, qual afirmativa está correta? Alternativa 1: A máquina deve ser inspecionada antes da entrega; manuais disponíveis no local e avisos em português Alternativa 2: A inspeção só é necessária após o primeiro uso na obra Alternativa 3: Os manuais podem ficar arquivados na sede da locadora Alternativa 4: Os avisos de segurança podem estar em qualquer idioma"
     },
     {
       "index": 8,
@@ -195,6 +195,48 @@
     },
     {
       "index": 27,
+      "id": "s33",
+      "title": "O que é o EPI e sua Importância",
+      "file": "audios/s33.mp3",
+      "text": "Vídeo aula. O que é o EPI e sua Importância. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 28,
+      "id": "s34",
+      "title": "O Sistema de Proteção Contra Quedas (SPIQ)",
+      "file": "audios/s34.mp3",
+      "text": "Vídeo aula. O Sistema de Proteção Contra Quedas, SPIQ. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 29,
+      "id": "s34b",
+      "title": "EPI — Equipamento de Proteção Individual Para Trabalho em Altura",
+      "file": "audios/s34b.mp3",
+      "text": "EPI — Equipamento de Proteção Individual Para Trabalho em Altura. Equipamento de segurança utilizado para proteção contra risco de queda no posicionamento e movimentação nos trabalhos em altura, sendo utilizado em conjunto com cinturão de segurança tipo paraquedista."
+    },
+    {
+      "index": 30,
+      "id": "s35",
+      "title": "Padronização de EPIs na Fábrica",
+      "file": "audios/s35.mp3",
+      "text": "Vídeo aula. Padronização de EPIs na Fábrica. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 31,
+      "id": "s36",
+      "title": "Responsabilidades do Colaborador",
+      "file": "audios/s36.mp3",
+      "text": "Vídeo aula. Responsabilidades do Colaborador. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 32,
+      "id": "s31",
+      "title": "Quiz — Módulo 5",
+      "file": "audios/s31.mp3",
+      "text": "Quiz do Módulo 5. Responda às 5 perguntas sobre os conceitos do módulo. Pergunta 1: O que é um EPI (Equipamento de Proteção Individual)? Alternativa 1: Equipamento coletivo instalado permanentemente na PEMT Alternativa 2: Dispositivo ou produto de uso individual destinado à proteção do trabalhador contra riscos à saúde e segurança Alternativa 3: Ferramenta manual usada apenas para içamento de cargas no cesto Alternativa 4: Documento que autoriza o operador a conduzir a plataforma elevatória Pergunta 2: O que significa SPIQ no contexto de trabalho em altura? Alternativa 1: Sistema de Proteção Contra Incêndio e Queimaduras Alternativa 2: Sinalização de Proteção em Instalações Químicas Alternativa 3: Sistema de Proteção Contra Quedas Alternativa 4: Supervisão Programada de Inspeção de Qualidade Pergunta 3: Sobre o EPI para trabalho em altura, qual afirmativa está correta? Alternativa 1: Substitui completamente o cinturão de segurança em qualquer situação Alternativa 2: É opcional quando o operador permanece sentado no cesto da PEMT Alternativa 3: Serve apenas para proteção contra choque elétrico Alternativa 4: Protege contra risco de queda no posicionamento e movimentação em altura, usado com cinturão tipo paraquedista Pergunta 4: Sobre a padronização de EPIs na fábrica, o que o colaborador deve fazer? Alternativa 1: Utilizar apenas EPIs homologados e padronizados pela empresa para sua função Alternativa 2: Escolher qualquer EPI do mercado, desde que tenha aparência similar Alternativa 3: Compartilhar EPIs sem higienizá-los para agilizar a operação Alternativa 4: Usar EPIs vencidos se ainda estiverem visualmente íntegros Pergunta 5: Quais são responsabilidades do colaborador em relação aos EPIs? Alternativa 1: Usar o EPI apenas no primeiro dia; depois a empresa assume a responsabilidade Alternativa 2: Usar conforme orientado, conservar, comunicar alterações ou defeitos e responsabilizar-se pelo mau uso Alternativa 3: Recusar qualquer EPI fornecido sem informar o supervisor Alternativa 4: Realizar manutenção e reparo do EPI sem capacitação específica"
+    },
+    {
+      "index": 33,
       "id": "s32",
       "title": "Treinamento Concluído",
       "file": "audios/s32.mp3",

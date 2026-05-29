@@ -68,7 +68,7 @@ const NARRATION_OVERRIDES = {
     'Procedimentos Inseguros. Visualize as imagens com exemplos de práticas inseguras na operação da PEMT.',
   s30: null, // montado a partir do deck do jogo Identifique o Risco
   s32:
-    'Conclusão do treinamento. Parabéns! Você concluiu o treinamento teórico de Plataforma de Trabalho Aéreo, NR-18. Aplique na prática inspeção pré-uso, operação segura e respeito aos limites do fabricante. Segurança não é sorte — é procedimento, capacitação e responsabilidade.',
+    'Conclusão do treinamento. Treinamento Concluído. NR-18 PEMT. Parabéns! Você concluiu o treinamento teórico de Plataforma de Trabalho Aéreo. Aplique na prática tudo o que aprendeu: inspeção pré-uso, operação segura, respeito aos limites do fabricante e atitude de zero acidente. Segurança não é sorte — é procedimento, capacitação e responsabilidade.',
 };
 
 function cleanText(text) {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-27T19:52:02.590Z",
+  "generatedAt": "2026-05-29T12:55:24.325Z",
   "source": "index.html",
   "audioDir": "audios",
   "slides": [
@@ -23,7 +23,7 @@
       "id": "s6",
       "title": "Conteúdo Programático",
       "file": "audios/s6.mp3",
-      "text": "Sumário. Conteúdo Programático. Módulo 1: Introdução e Conceitos Básicos. Módulo 2: Requisitos de Segurança, Inspeção e Manutenção. Módulo 3: Regras de Operação Segura e Riscos do Ambiente."
+      "text": "Sumário. Conteúdo Programático. Módulo 1: Introdução e Conceitos Básicos. Módulo 2: Requisitos de Segurança, Inspeção e Manutenção. Módulo 3: Regras de Operação Segura e Riscos do Ambiente. Módulo 4: Proibições e Procedimentos Inseguros. Módulo 5: Equipamentos de Proteção Individual."
     },
     {
       "index": 3,
@@ -118,38 +118,87 @@
     },
     {
       "index": 16,
-      "id": "s22b",
-      "title": "Práticas Proibidas",
-      "file": "audios/s22b.mp3",
-      "text": "Práticas proibidas na operação da PEMT. É vedado: a) o uso de pranchas, escadas e outros dispositivos que visem atingir maior altura ou distância sobre a mesma; b) a sua utilização como guindaste; c) a realização de qualquer trabalho sob condições climáticas que exponham trabalhadores a riscos; d) a operação de equipamento em situações que contrariem as especificações do fabricante quanto à velocidade do ar, inclinação da plataforma em relação ao solo e proximidade a redes de energia elétrica; e) o transporte de trabalhadores e materiais não relacionados aos serviços em execução."
-    },
-    {
-      "index": 17,
-      "id": "s23",
-      "title": "Atenção ao Clima e ao Vento",
-      "file": "audios/s23.mp3",
-      "text": "Vídeo aula. Atenção ao Clima e ao Vento. Assista ao vídeo sobre os cuidados com condições climáticas e vento na operação da PEMT e avance quando concluir."
-    },
-    {
-      "index": 18,
       "id": "s24",
       "title": "Redes Elétricas e Riscos Aéreos",
       "file": "audios/s24.mp3",
       "text": "Vídeo aula. Redes Elétricas e Riscos Aéreos. Assista ao vídeo sobre os perigos de redes elétricas e riscos aéreos na operação da PEMT e avance quando concluir."
     },
     {
-      "index": 19,
+      "index": 17,
       "id": "s25",
       "title": "Distância Segura da Rede Elétrica",
       "file": "audios/s25.mp3",
       "text": "Segurança elétrica. Distância segura da rede elétrica. Atenção: recomenda-se uma distância mínima de 3 metros de qualquer rede elétrica. Siga as recomendações no manual do maquinário. Perigo, alta tensão."
     },
     {
-      "index": 20,
+      "index": 18,
+      "id": "s23",
+      "title": "Atenção ao Clima e ao Vento",
+      "file": "audios/s23.mp3",
+      "text": "Vídeo aula. Atenção ao Clima e ao Vento. Assista ao vídeo sobre os cuidados com condições climáticas e vento na operação da PEMT e avance quando concluir."
+    },
+    {
+      "index": 19,
       "id": "s26",
       "title": "Permitido ou Proibido",
       "file": "audios/s26.mp3",
       "text": "Desafio do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Cinco situações sobre movimentação, clima e segurança elétrica. Situação 1: Usar escada ou prancha no cesto para ganhar altura. Resposta correta: Proibido. Proibido — não use dispositivos extras no cesto. Situação 2: Utilizar a PEMT como guindaste para içar materiais. Resposta correta: Proibido. Proibido — a PEMT não substitui guindaste. Situação 3: Operar durante tempestade com risco para os trabalhadores. Resposta correta: Proibido. Proibido — pare diante de condições climáticas de risco. Situação 4: Consultar o manual do fabricante antes de operar perto de rede elétrica. Resposta correta: Permitido. Permitido — o manual define limites de distância, vento e inclinação. Situação 5: Transportar colegas no cesto que não participam do serviço. Resposta correta: Proibido. Proibido — só operadores envolvidos no serviço em execução. Conclua o jogo para validar o módulo."
+    },
+    {
+      "index": 20,
+      "id": "s-mod4",
+      "title": "MÓDULO 4",
+      "file": "audios/s-mod4.mp3",
+      "text": "Início do Módulo 4. Proibições e Procedimentos Inseguros."
+    },
+    {
+      "index": 21,
+      "id": "s27",
+      "title": "Proibições e Gambiarras",
+      "file": "audios/s27.mp3",
+      "text": "Vídeo aula. Proibições e Gambiarras. O que NUNCA fazer. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 22,
+      "id": "s22b",
+      "title": "Práticas Proibidas",
+      "file": "audios/s22b.mp3",
+      "text": "Práticas proibidas na operação da PEMT. É vedado: a) o uso de pranchas, escadas e outros dispositivos que visem atingir maior altura ou distância sobre a mesma; b) a sua utilização como guindaste; c) a realização de qualquer trabalho sob condições climáticas que exponham trabalhadores a riscos; d) a operação de equipamento em situações que contrariem as especificações do fabricante quanto à velocidade do ar, inclinação da plataforma em relação ao solo e proximidade a redes de energia elétrica; e) o transporte de trabalhadores e materiais não relacionados aos serviços em execução."
+    },
+    {
+      "index": 23,
+      "id": "s28",
+      "title": "Suspensão de Ferramentas e Organização",
+      "file": "audios/s28.mp3",
+      "text": "Vídeo aula. Suspensão de Ferramentas e Organização. Assista ao vídeo e avance quando concluir."
+    },
+    {
+      "index": 24,
+      "id": "s29",
+      "title": "Procedimentos Inseguros",
+      "file": "audios/s29.mp3",
+      "text": "Procedimentos Inseguros. Visualize as imagens com exemplos de práticas inseguras na operação da PEMT."
+    },
+    {
+      "index": 25,
+      "id": "s30",
+      "title": "Identifique o Risco",
+      "file": "audios/s30.mp3",
+      "text": "Desafio do Módulo 4. Identifique o Risco. Classifique cada situação como Gambiarra, falha de Organização ou Elevação Insegura. Três cenários sobre proibições e procedimentos inseguros da PEMT. Situação 1: Usar escadas ou pranchas dentro do cesto para alcançar altura extra. Alternativa 1: Gambiarra Alternativa 2: Organização Alternativa 3: Elevação Insegura Situação 2: Deixar furadeira e chaves soltas espalhadas no piso do cesto. Alternativa 1: Gambiarra Alternativa 2: Organização Alternativa 3: Elevação Insegura Situação 3: Elevar a PEMT com empilhadeira para trabalhar no telhado. Alternativa 1: Gambiarra Alternativa 2: Organização Alternativa 3: Elevação Insegura Conclua o jogo para validar o módulo."
+    },
+    {
+      "index": 26,
+      "id": "s-mod5",
+      "title": "MÓDULO 5",
+      "file": "audios/s-mod5.mp3",
+      "text": "Início do Módulo 5. Equipamentos de Proteção Individual."
+    },
+    {
+      "index": 27,
+      "id": "s32",
+      "title": "Treinamento Concluído",
+      "file": "audios/s32.mp3",
+      "text": "Conclusão do treinamento. Parabéns! Você concluiu o treinamento teórico de Plataforma de Trabalho Aéreo, NR-18. Aplique na prática inspeção pré-uso, operação segura e respeito aos limites do fabricante. Segurança não é sorte — é procedimento, capacitação e responsabilidade."
     }
   ]
 }

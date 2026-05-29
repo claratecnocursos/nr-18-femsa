@@ -20,7 +20,7 @@ const NARRATION_OVERRIDES = {
   s1:
     'Módulo de Treinamento. Segurança do Trabalho. NR-18 — Treinamento de Plataforma de Trabalho Aéreo. Capacitação e segurança na operação de Plataformas de Trabalho Aéreo, PTA.',
   s6:
-    'Sumário. Conteúdo Programático. Módulo 1: Introdução e Conceitos Básicos. Módulo 2: Requisitos de Segurança, Inspeção e Manutenção. Módulo 3: Regras de Operação Segura e Riscos do Ambiente.',
+    'Sumário. Conteúdo Programático. Módulo 1: Introdução e Conceitos Básicos. Módulo 2: Requisitos de Segurança, Inspeção e Manutenção. Módulo 3: Regras de Operação Segura e Riscos do Ambiente. Módulo 4: Proibições e Procedimentos Inseguros. Módulo 5: Equipamentos de Proteção Individual.',
   s2:
     'Apresentação. Bem-vindo ao Treinamento de Plataforma de Trabalho Aéreo, NR-18. Assista ao vídeo de introdução e avance quando concluir.',
   s3:
@@ -45,6 +45,19 @@ const NARRATION_OVERRIDES = {
   s25:
     'Segurança elétrica. Distância segura da rede elétrica. Atenção: recomenda-se uma distância mínima de 3 metros de qualquer rede elétrica. Siga as recomendações no manual do maquinário. Perigo, alta tensão.',
   s26: null, // montado a partir do deck do jogo Permitido ou Proibido
+  's-mod4':
+    'Início do Módulo 4. Proibições e Procedimentos Inseguros.',
+  's-mod5':
+    'Início do Módulo 5. Equipamentos de Proteção Individual.',
+  s27:
+    'Vídeo aula. Proibições e Gambiarras. O que NUNCA fazer. Assista ao vídeo e avance quando concluir.',
+  s28:
+    'Vídeo aula. Suspensão de Ferramentas e Organização. Assista ao vídeo e avance quando concluir.',
+  s29:
+    'Procedimentos Inseguros. Visualize as imagens com exemplos de práticas inseguras na operação da PEMT.',
+  s30: null, // montado a partir do deck do jogo Identifique o Risco
+  s32:
+    'Conclusão do treinamento. Parabéns! Você concluiu o treinamento teórico de Plataforma de Trabalho Aéreo, NR-18. Aplique na prática inspeção pré-uso, operação segura e respeito aos limites do fabricante. Segurança não é sorte — é procedimento, capacitação e responsabilidade.',
 };
 
 function cleanText(text) {
@@ -98,6 +111,17 @@ function parseMod3BinaryDeck(html) {
   }
 }
 
+function parseMod4RiskDeck(html) {
+  const match = html.match(/const\s+mod4RiskDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
 function buildMod3Narration(deck) {
   if (!deck.length) {
     return 'Desafio do Módulo 3. Permitido ou Proibido. Decida se cada prática pode ou não ser realizada na operação da PEMT. Conclua o jogo para validar o módulo.';
@@ -110,6 +134,28 @@ function buildMod3Narration(deck) {
   deck.forEach((item, index) => {
     const answer = item.allowed ? 'Permitido' : 'Proibido';
     parts.push(`Situação ${index + 1}: ${cleanText(item.text)} Resposta correta: ${answer}. ${cleanText(item.tip)}`);
+  });
+
+  parts.push('Conclua o jogo para validar o módulo.');
+  return parts.join(' ');
+}
+
+function buildMod4Narration(deck) {
+  const alternatives = ['Gambiarra', 'Organização', 'Elevação Insegura'];
+
+  if (!deck.length) {
+    return 'Desafio do Módulo 4. Identifique o Risco. Classifique cada situação como Gambiarra, Organização ou Elevação Insegura. Conclua o jogo para validar o módulo.';
+  }
+
+  const parts = [
+    'Desafio do Módulo 4. Identifique o Risco. Classifique cada situação como Gambiarra, falha de Organização ou Elevação Insegura. Três cenários sobre proibições e procedimentos inseguros da PEMT.',
+  ];
+
+  deck.forEach((item, index) => {
+    parts.push(`Situação ${index + 1}: ${cleanText(item.text)}`);
+    alternatives.forEach((opt, optIndex) => {
+      parts.push(`Alternativa ${optIndex + 1}: ${opt}`);
+    });
   });
 
   parts.push('Conclua o jogo para validar o módulo.');
@@ -146,6 +192,7 @@ function buildManifest(htmlPath = HTML_PATH) {
   const doc = dom.window.document;
   const quizQuestions = parseQuizQuestions(html);
   const mod3Deck = parseMod3BinaryDeck(html);
+  const mod4Deck = parseMod4RiskDeck(html);
 
   const slides = [...doc.querySelectorAll('#slides .slide')].map((slide, index) => {
     const id = slide.id || `slide-${index + 1}`;
@@ -155,6 +202,8 @@ function buildManifest(htmlPath = HTML_PATH) {
       text = buildQuizNarration(quizQuestions);
     } else if (text === null && id === 's26') {
       text = buildMod3Narration(mod3Deck);
+    } else if (text === null && id === 's30') {
+      text = buildMod4Narration(mod4Deck);
     } else if (text === undefined) {
       text = extractSlideText(slide);
     }
